@@ -10,6 +10,7 @@ export default function Sidebar() {
   const [breathingPhase, setBreathingPhase] = useState<'inhale' | 'hold' | 'exhale'>('inhale');
   const [weeklyMoodData, setWeeklyMoodData] = useState<MoodData[]>([]);
   const [isMoodDialogOpen, setIsMoodDialogOpen] = useState(false);
+  const [breathingTimeouts, setBreathingTimeouts] = useState<NodeJS.Timeout[]>([]);
   const { toast } = useToast();
 
   useEffect(() => {
@@ -22,35 +23,50 @@ export default function Sidebar() {
     let phase: 'inhale' | 'hold' | 'exhale' = 'inhale';
     let cycleCount = 0;
     const maxCycles = 4;
+    const timeouts: NodeJS.Timeout[] = [];
 
     const breathingCycle = () => {
       if (cycleCount >= maxCycles) {
         setIsBreathing(false);
+        setBreathingTimeouts([]);
         return;
       }
 
       // Inhale for 4 seconds
       setBreathingPhase('inhale');
-      setTimeout(() => {
+      const timeout1 = setTimeout(() => {
         // Hold for 7 seconds
         setBreathingPhase('hold');
-        setTimeout(() => {
+        const timeout2 = setTimeout(() => {
           // Exhale for 8 seconds
           setBreathingPhase('exhale');
-          setTimeout(() => {
+          const timeout3 = setTimeout(() => {
             cycleCount++;
             if (cycleCount < maxCycles) {
               breathingCycle();
             } else {
               setIsBreathing(false);
               setBreathingPhase('inhale');
+              setBreathingTimeouts([]);
             }
           }, 8000);
+          timeouts.push(timeout3);
         }, 7000);
+        timeouts.push(timeout2);
       }, 4000);
+      timeouts.push(timeout1);
     };
 
+    setBreathingTimeouts(timeouts);
     breathingCycle();
+  };
+
+  const stopBreathingExercise = () => {
+    // Clear all timeouts
+    breathingTimeouts.forEach(timeout => clearTimeout(timeout));
+    setBreathingTimeouts([]);
+    setIsBreathing(false);
+    setBreathingPhase('inhale');
   };
 
   const getBreathingText = () => {
@@ -156,12 +172,15 @@ export default function Sidebar() {
         
         <div className="text-center space-y-3">
           <button
-            onClick={startBreathingExercise}
-            disabled={isBreathing}
-            className="w-full py-3 bg-coral-400 text-white rounded-xl hover:bg-coral-500 transition-colors font-medium disabled:opacity-50"
-            data-testid="button-start-breathing"
+            onClick={isBreathing ? stopBreathingExercise : startBreathingExercise}
+            className={`w-full py-3 text-white rounded-xl transition-colors font-medium ${
+              isBreathing 
+                ? 'bg-red-400 hover:bg-red-500' 
+                : 'bg-coral-400 hover:bg-coral-500'
+            }`}
+            data-testid="button-breathing-control"
           >
-            {isBreathing ? 'Breathing...' : 'Start Exercise (4-7-8)'}
+            {isBreathing ? 'Stop Exercise' : 'Start Exercise (4-7-8)'}
           </button>
           <button className="w-full py-2 text-sage-600 hover:text-sage-700 transition-colors text-sm">
             More Techniques

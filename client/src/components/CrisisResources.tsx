@@ -22,20 +22,36 @@ export default function CrisisResources() {
             </p>
             <div className="space-y-2">
               <a 
-                href="tel:988" 
+                href="tel:+18005990019" 
                 className="flex items-center p-2 bg-coral-50 rounded-lg hover:bg-coral-100 transition-colors"
-                data-testid="link-crisis-phone"
+                data-testid="link-crisis-phone-kiran"
               >
                 <Phone className="text-coral-500 mr-2" size={16} />
-                <span className="text-sm font-medium">988 - Suicide & Crisis Lifeline</span>
+                <span className="text-sm font-medium">1800-599-0019 - KIRAN Mental Health</span>
               </a>
               <a 
-                href="sms:741741" 
+                href="tel:+919999666555" 
                 className="flex items-center p-2 bg-coral-50 rounded-lg hover:bg-coral-100 transition-colors"
-                data-testid="link-crisis-text"
+                data-testid="link-crisis-phone-vandrevala"
               >
-                <MessageSquare className="text-coral-500 mr-2" size={16} />
-                <span className="text-sm font-medium">Text HOME to 741741 - Crisis Text Line</span>
+                <Phone className="text-coral-500 mr-2" size={16} />
+                <span className="text-sm font-medium">+91 9999 666 555 - Vandrevala Foundation</span>
+              </a>
+              <a 
+                href="tel:+914424640050" 
+                className="flex items-center p-2 bg-coral-50 rounded-lg hover:bg-coral-100 transition-colors"
+                data-testid="link-crisis-phone-sneha"
+              >
+                <Phone className="text-coral-500 mr-2" size={16} />
+                <span className="text-sm font-medium">+91 44 2464 0050 - Sneha India</span>
+              </a>
+              <a 
+                href="tel:+919152987821" 
+                className="flex items-center p-2 bg-coral-50 rounded-lg hover:bg-coral-100 transition-colors"
+                data-testid="link-crisis-phone-icall"
+              >
+                <Phone className="text-coral-500 mr-2" size={16} />
+                <span className="text-sm font-medium">+91 9152 987 821 - iCall Mumbai</span>
               </a>
             </div>
           </div>
@@ -49,20 +65,46 @@ export default function CrisisResources() {
               This chatbot provides supportive conversation but is not a replacement for professional mental health care.
             </p>
             <div className="space-y-2">
-              <button 
+              <a 
+                href="https://www.practo.com/counselling"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full flex items-center p-2 bg-sage-50 rounded-lg hover:bg-sage-100 transition-colors"
-                data-testid="button-find-therapist"
+                data-testid="link-find-therapist-practo"
               >
                 <UserCheck className="text-sage-500 mr-2" size={16} />
-                <span className="text-sm font-medium">Find a Therapist</span>
-              </button>
-              <button 
+                <span className="text-sm font-medium">Find Therapist - Practo</span>
+              </a>
+              <a 
+                href="https://www.1to1help.net/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full flex items-center p-2 bg-sage-50 rounded-lg hover:bg-sage-100 transition-colors"
-                data-testid="button-mental-health-resources"
+                data-testid="link-online-therapy-1to1"
               >
                 <Building2 className="text-sage-500 mr-2" size={16} />
-                <span className="text-sm font-medium">Mental Health Resources</span>
-              </button>
+                <span className="text-sm font-medium">1to1Help - Online Therapy</span>
+              </a>
+              <a 
+                href="https://manasthali.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full flex items-center p-2 bg-sage-50 rounded-lg hover:bg-sage-100 transition-colors"
+                data-testid="link-manasthali"
+              >
+                <UserCheck className="text-sage-500 mr-2" size={16} />
+                <span className="text-sm font-medium">Manasthali - Mental Health</span>
+              </a>
+              <a 
+                href="https://www.betterhelp.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full flex items-center p-2 bg-sage-50 rounded-lg hover:bg-sage-100 transition-colors"
+                data-testid="link-betterhelp"
+              >
+                <Building2 className="text-sage-500 mr-2" size={16} />
+                <span className="text-sm font-medium">BetterHelp - Online Counseling</span>
+              </a>
             </div>
           </div>
         </div>

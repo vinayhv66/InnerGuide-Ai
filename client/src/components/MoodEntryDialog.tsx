@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Heart, Smile, Meh, Frown, X } from 'lucide-react';
@@ -54,6 +54,9 @@ export default function MoodEntryDialog({ isOpen, onClose, onSave }: MoodEntryDi
             <Heart className="text-coral-500 mr-2" size={20} />
             How are you feeling today?
           </DialogTitle>
+          <DialogDescription className="text-sage-600">
+            Track your daily mood to better understand patterns and support your mental well-being.
+          </DialogDescription>
         </DialogHeader>
         
         <div className="space-y-6">
