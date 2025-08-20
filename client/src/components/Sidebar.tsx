@@ -2,11 +2,15 @@ import { useState, useEffect } from "react";
 import { Wind, TrendingUp, Heart, Music, Sprout, PenTool } from "lucide-react";
 import { moodTracker } from "@/lib/moodTracking";
 import { MoodData } from "@/types";
+import MoodEntryDialog from "@/components/MoodEntryDialog";
+import { useToast } from "@/hooks/use-toast";
 
 export default function Sidebar() {
   const [isBreathing, setIsBreathing] = useState(false);
   const [breathingPhase, setBreathingPhase] = useState<'inhale' | 'hold' | 'exhale'>('inhale');
   const [weeklyMoodData, setWeeklyMoodData] = useState<MoodData[]>([]);
+  const [isMoodDialogOpen, setIsMoodDialogOpen] = useState(false);
+  const { toast } = useToast();
 
   useEffect(() => {
     setWeeklyMoodData(moodTracker.getWeeklyMoodData());
@@ -116,6 +120,17 @@ export default function Sidebar() {
     return heights[mood] || 20;
   };
 
+  const handleMoodSave = (mood: MoodData['mood'], notes?: string) => {
+    // Refresh the mood data to show the new entry
+    setWeeklyMoodData(moodTracker.getWeeklyMoodData());
+    
+    // Show success message
+    toast({
+      title: "Mood entry saved",
+      description: `Your mood has been recorded as "${mood}". Thank you for checking in with yourself.`,
+    });
+  };
+
   return (
     <div className="space-y-6">
       {/* Breathing Exercise */}
@@ -177,6 +192,7 @@ export default function Sidebar() {
         </div>
         
         <button 
+          onClick={() => setIsMoodDialogOpen(true)}
           className="w-full py-3 bg-sage-50 text-sage-700 rounded-xl hover:bg-sage-100 transition-colors font-medium border border-sage-200"
           data-testid="button-add-mood-entry"
         >
@@ -213,6 +229,12 @@ export default function Sidebar() {
           View All Activities
         </button>
       </div>
+
+      <MoodEntryDialog
+        isOpen={isMoodDialogOpen}
+        onClose={() => setIsMoodDialogOpen(false)}
+        onSave={handleMoodSave}
+      />
     </div>
   );
 }
