@@ -108,7 +108,7 @@ export default function ChatInterface({ initialMood }: ChatInterfaceProps) {
           </div>
         </div>
         
-        <div className="h-96 overflow-y-auto p-4 space-y-4" data-testid="chat-messages">
+        <div className="h-[600px] overflow-y-auto p-4 space-y-4" data-testid="chat-messages">
           {messages.map((message) => (
             <div key={message.id} className={`flex items-start space-x-3 ${message.sender === 'user' ? 'justify-end' : ''}`}>
               {message.sender === 'bot' && (

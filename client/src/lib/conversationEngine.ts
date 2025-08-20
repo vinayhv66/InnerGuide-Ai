@@ -48,7 +48,21 @@ export class ConversationEngine {
       ]
     },
     {
-      condition: (context) => context.keywords.includes('work') || context.keywords.includes('job') || context.keywords.includes('career'),
+      condition: (context) => context.keywords.some(k => this.keywords.jobSearch.includes(k)),
+      responses: [
+        "I can really understand how challenging and emotionally draining job searching can be. The uncertainty, the constant rejections, and the pressure to present yourself perfectly can take a serious toll on your mental health and self-worth. What you're experiencing - whether it's anxiety, discouragement, or feeling like you're not good enough - is incredibly common and completely valid.\n\nJob searching often triggers deeper feelings about our identity, value, and place in the world. When we don't get responses to applications or face rejection after interviews, it's natural for our minds to interpret this as personal failure, even though the job market is influenced by so many factors beyond our control - economic conditions, timing, company needs, and sometimes just luck.\n\nHere's what I want you to remember: your worth as a person isn't determined by employment status. You are valuable, skilled, and deserving of opportunities regardless of your current situation. Try to separate your identity from your job search outcomes. Create a routine that includes self-care activities unrelated to job searching. Set daily limits on application time to prevent burnout. Consider reaching out to your network - many opportunities come through connections rather than online applications. Remember that rejection often reflects fit and timing, not your qualifications or character.",
+        "The stress and emotional impact of being unemployed or searching for work goes far beyond just financial concerns - it affects our sense of purpose, daily structure, social connections, and self-esteem. Society often ties our identity so closely to our careers that being without work can feel like losing a part of ourselves, which can lead to feelings of depression, anxiety, and social isolation.\n\nMany people experience what psychologists call 'unemployment depression' - a specific type of situational depression that includes symptoms like loss of motivation, sleep disturbances, increased irritability, and feelings of hopelessness about the future. You might also be dealing with 'job search anxiety,' which can include physical symptoms like heart palpitations before interviews, obsessive thoughts about applications, or avoidance behaviors.\n\nPractical strategies to maintain your mental health during this time: Create structure in your days by setting specific times for job searching, exercise, and personal activities. Practice self-compassion - treat yourself with the same kindness you'd show a friend in this situation. Consider this time as an opportunity for skill development, self-reflection, or pursuing interests you couldn't while employed. Stay connected with supportive people who understand your situation. Remember that career transitions, while difficult, often lead to better opportunities that align more closely with your values and goals.",
+        "What you're going through with job searching is one of life's most stressful experiences, ranking alongside major life changes like moving, relationship changes, or health issues. The combination of financial pressure, uncertainty about the future, and repeated evaluation by strangers can create a perfect storm for mental health challenges.\n\nDuring extended job searches, many people develop patterns that can actually work against their success: perfectionism that prevents them from applying to 'good enough' positions, catastrophic thinking about their career prospects, or social withdrawal due to shame about their situation. You might also be experiencing 'decision fatigue' from constantly crafting applications and making choices about which opportunities to pursue.\n\nHere's a comprehensive approach to managing both the practical and emotional aspects: Set realistic daily goals for applications while also scheduling non-job-search activities. Practice mindfulness to stay present rather than spiraling into 'what if' thinking about the future. Develop a personal mission statement about what you want in your next role beyond just 'any job.' Use rejection as data, not judgment - each 'no' teaches you something about fit or market conditions. Consider working with a career counselor or therapist who specializes in career transitions. Most importantly, remember that your current situation is temporary, and your response to this challenge is building resilience and self-knowledge that will serve you throughout your career."
+      ],
+      quickResponses: [
+        "Help me cope with job rejection",
+        "I'm losing motivation in my job search",
+        "I feel like a failure because I can't find work",
+        "How do I maintain self-worth while unemployed?"
+      ]
+    },
+    {
+      condition: (context) => context.keywords.some(k => this.keywords.work.includes(k)),
       responses: [
         "Work stress is one of the most common sources of mental health challenges in our society, and what you're experiencing is shared by countless people who are also struggling to balance professional demands with personal well-being. The pressure to constantly perform, meet deadlines, and exceed expectations can create a chronic state of stress that affects every aspect of your life.\n\nWork-related stress often stems from feeling like you have little control over your environment, unrealistic expectations (either from others or yourself), poor work-life boundaries, or being in a role that doesn't align with your values or strengths. When we spend 8+ hours a day in a stressful environment, it's natural for this to spill over into our personal lives, affecting our relationships, sleep, and overall happiness.\n\nHere are some strategies that can help: Practice the 'transition ritual' - create a specific routine that helps you mentally leave work at work, like changing clothes or taking a short walk. Learn to distinguish between 'urgent' and 'important' tasks - not everything that feels urgent actually is. Set micro-boundaries throughout your day, like taking actual lunch breaks or not checking emails after a certain hour. Remember, your worth as a person is not determined by your productivity or professional achievements. You are valuable simply because you exist.",
         "The weight of professional responsibilities can feel crushing, especially when it seems like there's always more to do and never enough time or resources to do it well. This often creates what psychologists call 'role overload' - when the demands of your position exceed your capacity to meet them effectively, leading to feelings of inadequacy and chronic stress.\n\nMany people experience 'imposter syndrome' at work - feeling like you don't belong or aren't qualified, despite evidence to the contrary. This can create additional pressure to overwork and over-prove yourself. Additionally, toxic workplace cultures, lack of recognition, or feeling disconnected from the purpose of your work can drain your motivation and energy.\n\nPractical steps to regain some control: Try 'time-boxing' - allocate specific time blocks for different tasks and stick to them, even if the task isn't 'perfect.' Practice saying no or negotiating deadlines when possible - most people respect honest communication about capacity. Create a 'done list' alongside your to-do list to acknowledge what you've accomplished. Consider if there are aspects of your work environment or role that could be addressed through conversation with supervisors or HR. Remember, a job that consistently damages your mental health isn't sustainable long-term.",
@@ -72,6 +86,79 @@ export class ConversationEngine {
         "Help me create a wind-down ritual",
         "I want to learn about progressive muscle relaxation"
       ]
+    },
+    {
+      condition: (context) => context.keywords.some(k => this.keywords.anxiety.includes(k)) || (context.keywords.includes('anxious') && context.intensity > 3),
+      responses: [
+        "I'm hearing several signs that suggest you might be experiencing panic or anxiety symptoms, and I want you to know that what you're describing - racing heart, difficulty breathing, racing thoughts, or that sense of impending doom - are very real physiological responses that millions of people experience. Panic attacks and anxiety disorders are among the most common mental health conditions, affecting about 40 million adults in the US alone.\n\nWhat you're experiencing happens when your brain's alarm system (the amygdala) becomes overactive and triggers your body's fight-or-flight response even when there's no real danger. This floods your system with stress hormones like adrenaline and cortisol, which cause those physical symptoms you're feeling. Your brain is trying to protect you, but it's responding to perceived threats rather than actual ones.\n\nImmediate coping strategies for when you feel panic rising: Try the '5-4-3-2-1' grounding technique - name 5 things you see, 4 you can touch, 3 you can hear, 2 you can smell, 1 you can taste. Practice belly breathing - put one hand on your chest, one on your stomach, and breathe so only the bottom hand moves. Remember that panic attacks, while terrifying, are not dangerous and will pass. If you're having frequent panic attacks or they're interfering with your daily life, please consider speaking with a mental health professional - anxiety is very treatable with therapy and/or medication.",
+        "The symptoms you're describing - whether it's the physical sensations of panic, the constant 'what if' thoughts, or feeling like your mind won't stop racing - are classic signs of anxiety that has likely moved beyond normal worry into something that needs attention and support. Anxiety becomes problematic when it starts controlling your decisions, avoiding situations, or significantly impacting your sleep, relationships, or daily functioning.\n\nGeneralized anxiety often develops gradually and can include excessive worry about everyday situations, difficulty concentrating, muscle tension, fatigue from being constantly 'on alert,' and sleep disturbances. Social anxiety might show up as intense fear of judgment, physical symptoms in social situations, or avoiding social events altogether. Whatever form your anxiety takes, it's important to know that it's a medical condition, not a character flaw or something you should just 'get over.'\n\nStrategies for managing ongoing anxiety: Learn to identify your anxiety triggers and early warning signs. Practice challenging anxious thoughts by asking 'What evidence do I have for this worry?' and 'What would I tell a friend having this thought?' Create an anxiety toolkit with techniques that work for you - breathing exercises, progressive muscle relaxation, mindfulness apps, or calming music. Limit caffeine and alcohol, which can worsen anxiety symptoms. Most importantly, consider professional help - cognitive behavioral therapy (CBT) is particularly effective for anxiety, and there are excellent medications available if needed."
+      ],
+      quickResponses: [
+        "Help me stop a panic attack right now",
+        "I avoid situations because of my anxiety",
+        "My worry thoughts won't stop racing",
+        "I think I need professional help for my anxiety"
+      ]
+    },
+    {
+      condition: (context) => context.keywords.some(k => this.keywords.depression.includes(k)) || (context.keywords.includes('sad') && context.intensity > 3),
+      responses: [
+        "I'm concerned about what you're sharing because several of the things you've mentioned - feeling hopeless, worthless, empty, or like nothing matters - are significant symptoms of depression. When someone says they feel like a burden, have no energy for things they used to enjoy, or that everything feels pointless, these are red flags that suggest you might be dealing with major depression, not just temporary sadness.\n\nDepression is a serious medical condition that affects brain chemistry, specifically neurotransmitters like serotonin, dopamine, and norepinephrine that regulate mood, motivation, and energy. It's not about being weak or not trying hard enough - it's a legitimate illness that affects about 21 million adults in the US each year. The feelings of hopelessness and worthlessness are symptoms of the condition, not accurate reflections of your actual worth or future prospects.\n\nIf you're having thoughts of self-harm or suicide, please reach out for immediate help by calling 988 (Suicide & Crisis Lifeline) or going to your nearest emergency room. For ongoing depression, some strategies that can help alongside professional treatment: Try to maintain basic self-care even when it feels impossible - eating regular meals, getting some sunlight, taking showers. Practice 'behavioral activation' - engage in one small meaningful activity each day, even if you don't feel like it. Challenge depressive thoughts by asking 'Is this thought helpful?' and 'What would I tell a friend thinking this?' Depression is highly treatable - therapy, medication, or a combination can make an enormous difference."
+      ],
+      quickResponses: [
+        "I feel hopeless about my future",
+        "Nothing brings me joy anymore",
+        "I feel like I'm a burden to others",
+        "Help me understand if this is depression"
+      ]
+    },
+    {
+      condition: (context) => context.keywords.some(k => this.keywords.adhd.includes(k)),
+      responses: [
+        "What you're describing - trouble focusing, being easily distracted, feeling restless, or having difficulty completing tasks - could be signs of ADHD (Attention-Deficit/Hyperactivity Disorder). ADHD is a neurodevelopmental condition that affects executive functioning, including attention, working memory, and impulse control. It's often misunderstood as laziness or lack of willpower, but it's actually about how the brain processes information and regulates attention.\n\nADHD symptoms in adults can include: difficulty sustaining attention on tasks, procrastination, forgetfulness, feeling restless or 'on the go,' interrupting others, and difficulty organizing tasks and time. Many adults discover they have ADHD later in life when they're struggling with work demands or when their children are diagnosed. Women especially are often underdiagnosed because their symptoms may be more internalized.\n\nStrategies that can help: Break large tasks into smaller, manageable chunks. Use timers and external reminders. Create structured routines and stick to them. Find your optimal environment for focus (some people need background noise, others complete silence). Consider body doubling - working alongside others even if on different tasks. If these symptoms are significantly impacting your work, relationships, or daily life, consider getting evaluated by a mental health professional who specializes in ADHD - proper diagnosis and treatment can be life-changing."
+      ],
+      quickResponses: [
+        "I think I might have ADHD",
+        "Help me focus better",
+        "I procrastinate everything",
+        "My mind feels scattered all the time"
+      ]
+    },
+    {
+      condition: (context) => context.keywords.some(k => this.keywords.bipolar.includes(k)),
+      responses: [
+        "The patterns you're describing - significant mood swings, periods of feeling extremely energetic or euphoric followed by crashes, racing thoughts, or engaging in risky behaviors - could potentially be signs of bipolar disorder. This is a serious but treatable mental health condition that involves extreme shifts in mood, energy, and activity levels that are much more intense than typical mood changes.\n\nBipolar disorder typically involves manic or hypomanic episodes (elevated mood, increased energy, decreased need for sleep, grandiose thoughts, rapid speech, risky behavior) alternating with depressive episodes (low mood, low energy, hopelessness, sleep changes). These mood changes are distinct periods that last days to weeks, not just hour-to-hour mood fluctuations.\n\nIf you're experiencing these patterns, it's crucial to work with a mental health professional for proper evaluation and treatment. Bipolar disorder requires professional care and often involves mood stabilizing medications along with therapy. In the meantime: track your mood patterns, maintain regular sleep schedules, avoid alcohol and drugs, and build a strong support system. If you're in a manic state and considering risky behaviors, or if you're in a depressive phase with suicidal thoughts, please seek immediate professional help."
+      ],
+      quickResponses: [
+        "My moods swing between extreme highs and lows",
+        "I have periods where I don't need much sleep",
+        "I make impulsive decisions during mood episodes",
+        "I think I need professional evaluation"
+      ]
+    },
+    {
+      condition: (context) => context.keywords.some(k => this.keywords.ptsd.includes(k)),
+      responses: [
+        "What you're describing - flashbacks, nightmares, feeling triggered by certain situations, or having intrusive memories - sounds like you may be dealing with trauma responses or PTSD (Post-Traumatic Stress Disorder). Trauma can fundamentally change how our nervous system responds to the world, leaving us feeling unsafe even when we're actually safe.\n\nPTSD develops when our brain's natural recovery process gets stuck after experiencing or witnessing traumatic events. Your mind and body are trying to protect you by staying hypervigilant, but this can lead to exhaustion, emotional numbing, avoidance of triggers, sleep disturbances, and feeling disconnected from yourself and others. These are normal responses to abnormal experiences.\n\nTrauma-informed coping strategies: Practice grounding techniques when triggered - feel your feet on the floor, name objects in your environment, use ice cubes or cold water on your wrists. Create safety in your physical environment with comforting objects, good lighting, and clear exits. Develop a support network of trusted people who understand trauma. Consider EMDR therapy or trauma-focused therapy - these specialized treatments can be incredibly effective for PTSD. Remember, healing from trauma is possible, and seeking help is an act of courage, not weakness."
+      ],
+      quickResponses: [
+        "I have flashbacks that feel very real",
+        "Certain things trigger intense reactions in me",
+        "I feel disconnected from my emotions",
+        "Help me find trauma-informed therapy"
+      ]
+    },
+    {
+      condition: (context) => context.keywords.some(k => this.keywords.eatingDisorder.includes(k)),
+      responses: [
+        "I'm hearing some concerning patterns around food and eating that suggest you might be struggling with disordered eating or an eating disorder. Whether it's binge eating, restricting food intake, purging behaviors, or obsessive thoughts about calories and weight, these are serious issues that deserve compassionate professional attention.\n\nEating disorders are complex mental health conditions that often involve using food, eating, or weight control as ways to cope with difficult emotions, trauma, perfectionism, or feeling out of control in other areas of life. They're not about vanity or lack of willpower - they're serious psychological conditions that can have severe physical and emotional consequences.\n\nIf you're experiencing these struggles: please reach out to a healthcare provider who specializes in eating disorders, consider calling the National Eating Disorders Association helpline, and try to have compassion for yourself - eating disorders thrive on shame and secrecy. Recovery is absolutely possible with proper support and treatment."
+      ],
+      quickResponses: [
+        "I'm struggling with my relationship with food",
+        "I need help with binge eating",
+        "My thoughts about food and weight are consuming",
+        "I want to find eating disorder resources"
+      ]
     }
   ];
 
@@ -89,10 +176,18 @@ export class ConversationEngine {
 
   private keywords = {
     emotions: ['happy', 'sad', 'angry', 'frustrated', 'anxious', 'worried', 'stressed', 'overwhelmed', 'depressed', 'excited', 'nervous', 'scared', 'lonely', 'confused', 'tired', 'exhausted'],
-    work: ['work', 'job', 'career', 'boss', 'colleague', 'deadline', 'meeting', 'project', 'office'],
+    jobSearch: ['job', 'employment', 'unemployed', 'looking for work', 'applying', 'interview', 'resume', 'hiring', 'rejected', 'no job', 'cant find', 'searching'],
+    work: ['workplace', 'boss', 'colleague', 'deadline', 'meeting', 'project', 'office', 'promotion', 'fired', 'quit'],
     relationships: ['family', 'friend', 'partner', 'relationship', 'marriage', 'divorce', 'breakup', 'conflict'],
     health: ['sleep', 'eating', 'exercise', 'pain', 'medication', 'therapy', 'counseling'],
-    coping: ['help', 'cope', 'manage', 'handle', 'deal', 'support', 'advice', 'technique', 'strategy']
+    coping: ['help', 'cope', 'manage', 'handle', 'deal', 'support', 'advice', 'technique', 'strategy'],
+    // Mental health condition indicators
+    anxiety: ['panic', 'racing heart', 'cant breathe', 'sweating', 'trembling', 'racing thoughts', 'what if', 'catastrophizing'],
+    depression: ['hopeless', 'worthless', 'empty', 'numb', 'crying', 'no energy', 'dont care', 'pointless', 'burden'],
+    adhd: ['cant focus', 'distracted', 'hyperactive', 'impulsive', 'forgetful', 'procrastinate', 'restless', 'scattered'],
+    bipolar: ['mood swings', 'manic', 'euphoric', 'grandiose', 'racing thoughts', 'no sleep', 'spending spree', 'reckless'],
+    ptsd: ['flashbacks', 'nightmares', 'triggered', 'avoidance', 'hypervigilant', 'trauma', 'dissociation', 'intrusive'],
+    eatingDisorder: ['binge', 'purge', 'restricting', 'calories', 'weight', 'body image', 'guilt eating', 'food obsession']
   };
 
   analyzeMessage(message: string): ConversationContext {
@@ -118,9 +213,16 @@ export class ConversationEngine {
     if (positiveCount > negativeCount) sentiment = 'positive';
     else if (negativeCount > positiveCount) sentiment = 'negative';
 
-    // Determine topic
+    // Determine topic with better specificity
     let topic = 'general';
-    if (foundKeywords.some(k => this.keywords.work.includes(k))) topic = 'work';
+    if (foundKeywords.some(k => this.keywords.jobSearch.includes(k))) topic = 'jobSearch';
+    else if (foundKeywords.some(k => this.keywords.anxiety.includes(k))) topic = 'anxiety';
+    else if (foundKeywords.some(k => this.keywords.depression.includes(k))) topic = 'depression';
+    else if (foundKeywords.some(k => this.keywords.adhd.includes(k))) topic = 'adhd';
+    else if (foundKeywords.some(k => this.keywords.bipolar.includes(k))) topic = 'bipolar';
+    else if (foundKeywords.some(k => this.keywords.ptsd.includes(k))) topic = 'ptsd';
+    else if (foundKeywords.some(k => this.keywords.eatingDisorder.includes(k))) topic = 'eatingDisorder';
+    else if (foundKeywords.some(k => this.keywords.work.includes(k))) topic = 'work';
     else if (foundKeywords.some(k => this.keywords.relationships.includes(k))) topic = 'relationships';
     else if (foundKeywords.some(k => this.keywords.health.includes(k))) topic = 'health';
     else if (foundKeywords.some(k => this.keywords.emotions.includes(k))) topic = 'emotions';
