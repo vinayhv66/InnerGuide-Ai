@@ -1,0 +1,218 @@
+import { useState, useEffect } from "react";
+import { Wind, TrendingUp, Heart, Music, Sprout, PenTool } from "lucide-react";
+import { moodTracker } from "@/lib/moodTracking";
+import { MoodData } from "@/types";
+
+export default function Sidebar() {
+  const [isBreathing, setIsBreathing] = useState(false);
+  const [breathingPhase, setBreathingPhase] = useState<'inhale' | 'hold' | 'exhale'>('inhale');
+  const [weeklyMoodData, setWeeklyMoodData] = useState<MoodData[]>([]);
+
+  useEffect(() => {
+    setWeeklyMoodData(moodTracker.getWeeklyMoodData());
+  }, []);
+
+  const startBreathingExercise = () => {
+    setIsBreathing(true);
+    // Implement 4-7-8 breathing pattern
+    let phase: 'inhale' | 'hold' | 'exhale' = 'inhale';
+    let cycleCount = 0;
+    const maxCycles = 4;
+
+    const breathingCycle = () => {
+      if (cycleCount >= maxCycles) {
+        setIsBreathing(false);
+        return;
+      }
+
+      // Inhale for 4 seconds
+      setBreathingPhase('inhale');
+      setTimeout(() => {
+        // Hold for 7 seconds
+        setBreathingPhase('hold');
+        setTimeout(() => {
+          // Exhale for 8 seconds
+          setBreathingPhase('exhale');
+          setTimeout(() => {
+            cycleCount++;
+            if (cycleCount < maxCycles) {
+              breathingCycle();
+            } else {
+              setIsBreathing(false);
+              setBreathingPhase('inhale');
+            }
+          }, 8000);
+        }, 7000);
+      }, 4000);
+    };
+
+    breathingCycle();
+  };
+
+  const getBreathingText = () => {
+    if (!isBreathing) return 'Breathe';
+    switch (breathingPhase) {
+      case 'inhale': return 'Inhale';
+      case 'hold': return 'Hold';
+      case 'exhale': return 'Exhale';
+      default: return 'Breathe';
+    }
+  };
+
+  const selfCareActivities = [
+    {
+      icon: Music,
+      name: "Listen to Calming Music",
+      duration: "5-10 minutes",
+      color: "coral"
+    },
+    {
+      icon: Sprout,
+      name: "Mindful Walking",
+      duration: "10-15 minutes",
+      color: "lavender"
+    },
+    {
+      icon: PenTool,
+      name: "Gratitude Journaling",
+      duration: "5 minutes",
+      color: "sage"
+    }
+  ];
+
+  // Generate week days for mood chart
+  const generateWeekDays = () => {
+    const days = ['M', 'T', 'W', 'T', 'F', 'S', 'S'];
+    const today = new Date();
+    const weekData = [];
+
+    for (let i = 6; i >= 0; i--) {
+      const date = new Date(today);
+      date.setDate(today.getDate() - i);
+      const dateString = date.toISOString().split('T')[0];
+      
+      const moodEntry = weeklyMoodData.find(entry => entry.date === dateString);
+      const moodValue = moodEntry ? getMoodHeight(moodEntry.mood) : 20;
+      const moodColor = moodEntry ? moodTracker.getMoodColor(moodEntry.mood) : 'bg-gray-300';
+      
+      weekData.push({
+        day: days[6 - i],
+        height: moodValue,
+        color: moodColor
+      });
+    }
+
+    return weekData;
+  };
+
+  const getMoodHeight = (mood: MoodData['mood']) => {
+    const heights = {
+      'struggling': 20,
+      'low': 40,
+      'okay': 60,
+      'good': 80,
+      'great': 100
+    };
+    return heights[mood] || 20;
+  };
+
+  return (
+    <div className="space-y-6">
+      {/* Breathing Exercise */}
+      <div className="bg-white rounded-2xl p-6 shadow-sm border border-sage-100">
+        <div className="text-center mb-4">
+          <div className="w-16 h-16 bg-gradient-to-br from-coral-400 to-coral-500 rounded-full flex items-center justify-center mx-auto mb-3">
+            <Wind className="text-white" size={24} />
+          </div>
+          <h3 className="font-semibold text-charcoal mb-2">Guided Breathing</h3>
+          <p className="text-sm text-sage-600">Take a moment to center yourself</p>
+        </div>
+        
+        <div className="relative flex items-center justify-center mb-4">
+          <div className="w-32 h-32 border-4 border-sage-200 rounded-full flex items-center justify-center">
+            <div className={`w-20 h-20 bg-gradient-to-br from-sage-400 to-sage-500 rounded-full flex items-center justify-center transition-all duration-1000 ${
+              isBreathing && breathingPhase === 'inhale' ? 'scale-110' : 
+              isBreathing && breathingPhase === 'exhale' ? 'scale-90' : ''
+            }`}>
+              <span className="text-white font-medium text-sm">{getBreathingText()}</span>
+            </div>
+          </div>
+        </div>
+        
+        <div className="text-center space-y-3">
+          <button
+            onClick={startBreathingExercise}
+            disabled={isBreathing}
+            className="w-full py-3 bg-coral-400 text-white rounded-xl hover:bg-coral-500 transition-colors font-medium disabled:opacity-50"
+            data-testid="button-start-breathing"
+          >
+            {isBreathing ? 'Breathing...' : 'Start Exercise (4-7-8)'}
+          </button>
+          <button className="w-full py-2 text-sage-600 hover:text-sage-700 transition-colors text-sm">
+            More Techniques
+          </button>
+        </div>
+      </div>
+      
+      {/* Mood Tracking */}
+      <div className="bg-white rounded-2xl p-6 shadow-sm border border-sage-100">
+        <h3 className="font-semibold text-charcoal mb-4 flex items-center">
+          <TrendingUp className="text-sage-500 mr-2" size={20} />
+          Mood Journal
+        </h3>
+        
+        <div className="mb-4">
+          <div className="flex justify-between items-end h-20 mb-2">
+            {generateWeekDays().map((day, index) => (
+              <div key={index} className="flex flex-col items-center">
+                <div 
+                  className={`w-4 rounded-t ${day.color}`}
+                  style={{ height: `${day.height}%` }}
+                ></div>
+                <span className="text-xs text-sage-500 mt-1">{day.day}</span>
+              </div>
+            ))}
+          </div>
+          <p className="text-xs text-sage-500 text-center">This week's mood pattern</p>
+        </div>
+        
+        <button 
+          className="w-full py-3 bg-sage-50 text-sage-700 rounded-xl hover:bg-sage-100 transition-colors font-medium border border-sage-200"
+          data-testid="button-add-mood-entry"
+        >
+          Add Today's Entry
+        </button>
+      </div>
+      
+      {/* Self-Care Activities */}
+      <div className="bg-white rounded-2xl p-6 shadow-sm border border-sage-100">
+        <h3 className="font-semibold text-charcoal mb-4 flex items-center">
+          <Heart className="text-coral-500 mr-2" size={20} />
+          Self-Care Activities
+        </h3>
+        
+        <div className="space-y-3">
+          {selfCareActivities.map((activity, index) => (
+            <div 
+              key={index}
+              className={`flex items-center p-3 bg-${activity.color}-50 rounded-xl hover:bg-${activity.color}-100 transition-colors cursor-pointer`}
+              data-testid={`button-activity-${index}`}
+            >
+              <div className={`w-8 h-8 bg-${activity.color}-400 rounded-full flex items-center justify-center mr-3`}>
+                <activity.icon className="text-white" size={12} />
+              </div>
+              <div className="flex-1">
+                <p className="font-medium text-sm">{activity.name}</p>
+                <p className="text-xs text-sage-500">{activity.duration}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        
+        <button className="w-full mt-3 py-2 text-sage-600 hover:text-sage-700 transition-colors text-sm">
+          View All Activities
+        </button>
+      </div>
+    </div>
+  );
+}
