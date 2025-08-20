@@ -18,7 +18,11 @@ export default function ChatInterface({ initialMood }: ChatInterfaceProps) {
   };
 
   useEffect(() => {
-    scrollToBottom();
+    // Only scroll when a new bot message is added or when messages change significantly
+    const lastMessage = messages[messages.length - 1];
+    if (lastMessage && lastMessage.sender === 'bot') {
+      scrollToBottom();
+    }
   }, [messages]);
 
   useEffect(() => {
@@ -114,14 +118,14 @@ export default function ChatInterface({ initialMood }: ChatInterfaceProps) {
               )}
               
               <div className={`flex-1 ${message.sender === 'user' ? 'text-right' : ''}`}>
-                <div className={`rounded-2xl p-4 max-w-sm ${
+                <div className={`rounded-2xl p-4 ${message.sender === 'user' ? 'max-w-sm' : 'max-w-2xl'} ${
                   message.sender === 'user' 
                     ? 'bg-lavender-400 text-white rounded-tr-md ml-auto' 
                     : 'bg-sage-50 rounded-tl-md'
                 }`}>
-                  <p className={`leading-relaxed ${message.sender === 'user' ? 'text-white' : 'text-charcoal'}`}>
+                  <div className={`leading-relaxed whitespace-pre-wrap ${message.sender === 'user' ? 'text-white' : 'text-charcoal'}`}>
                     {message.content}
-                  </p>
+                  </div>
                   
                   {message.quickResponses && message.sender === 'bot' && (
                     <div className="mt-3 space-y-2">
