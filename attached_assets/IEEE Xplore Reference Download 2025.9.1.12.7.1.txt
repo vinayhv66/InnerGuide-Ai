@@ -1,0 +1,60 @@
+1. Meghrajani, V.R., Marathe, M., Sharma, R., Potdukhe, A., Wanjari, M.B., Taksande, A.B., Meghrajani, V.R. Jr and Wanjari, M., “A Comprehensive Analysis of Mental Health Problems in India and the Role of Mental Asylums ”, Cureus, vol. 15, no. 7, 2023.
+
+2. Parviainen, J. Rantala, J., “Chatbot breakthrough in the 2020s? An ethical reflection on the trend of automated consultations in health care ”, Medicine, Health Care and Philosophy, vol. 25, no. 1, pp. 61–71, 2022.
+
+3. Koulouri, T., Macredie, R.D. and Olakitan, D., “Chatbots to support young adults' mental health: an exploratory study of acceptability ”, ACM Transactions on Interactive Intelligent Systems (TiiS), vol. 12, no. 2, pp. 1–39, 2022.
+
+4. Rathnayaka, P., Mills, N., Burnett, D., De Silva, D., Alahakoon, D. and Gray, R, “A mental health chatbot with cognitive skills for personalised behavioural activation and remote health monitoring. Sensors, vol. 22, no. 10, p. 3653, 2022.
+
+5. Sweeney, C., Potts, C., Ennis, E., Bond, R., Mulvenna, M.D., O'neill, S., Malcolm, M., Kuosmanen, L., Kostenius, C., Vakaloudis, A. and Mcconvey, G., “Can Chatbots help support a person's mental health? Perceptions and views from mental healthcare professionals and experts ”, ACM Transactions on Computing for Healthcare, vol. 2, no. 3, pp. 1–15, 2021.
+
+6. Pham, K.T., Nabizadeh, A, Selek, S., “Artificial intelligence and chatbots in psychiatry. Psychiatric Quarterly, vol. 93, no. 1, pp. 249–253, 2022.
+
+7. Moulya, S. and Pragathi, T.R., “Mental health assist and diagnosis conversational interface using logistic regression model for emotion and sentiment analysis ”, In Journal of Physics: Conference Series (Vol. 2161, No. 1, p. 012039). IOP Publishing, 2022.
+
+8. Abd-Alrazaq, A.A., Alajlani, M., Ali, N., Denecke, K., Bewick, B.M. and Househ, M., “Perceptions and opinions of patients about mental health chatbots: scoping review. Journal of medical Internet research, vol. 23, no. 1, p. e17828, 2022.
+
+9. Potts, C., Ennis, E., Bond, R.B., Mulvenna, M.D., Mc Tear, M.F., Boyd, K., Broderick, T., Malcolm, M., Kuosmanen, L., Nieminen, H. and Vartiainen, A.K., “Chatbots to Support Mental Wellbeing of People Living in Rural Areas: Can User Groups Contribute to Co-design? ”, Journal of Technology in Behavioral Science, vol. 6, pp. 652–665, 2021.
+
+10. Booth, F., Potts, C., Bond, R., Mulvenna, M., Kostenius, C., Dhanapala, I., Vakaloudis, A., Cahill, B., Kuosmanen, L. and Ennis, E., “A Mental Health and Well-Being Chatbot: User Event Log Analysis. JMIR mHealth and uHealth ”, vol. 11, p. e43052, 2023.
+
+11. He, Y., Yang, L., Zhu, X., Wu, B., Zhang, S., Qian, C. and Tian, T., “Mental health chatbot for young adults with depressive symptoms during the COVID-19 pandemic: single-blind, three-arm randomized controlled trial ”, Journal of Medical Internet Research, 24 ( 11 ), p. e40719, 2022.
+
+12. Park, D.Y. and Kim, H., “Determinants of intentions to use digital mental healthcare content among university students, faculty, and staff: motivation, perceived usefulness, perceived ease of use, and parasocial interaction with AI Chatbot ”, Sustainability, 15 ( 1 ), p. 872, 2023.
+
+13. Daley, K., Hungerbuehler, I., Cavanagh, K., Claro, H.G., Swinton, P.A. and Kapps, M., “Preliminary evaluation of the engagement and effectiveness of a mental health chatbot. Frontiers in digital health, 2, p. 576361, 2020.
+
+14. Hinduja, S., Afrin, M., Mistry, S. and Krishna, A., “Machine learning-based proactive social-sensor service for mental health monitoring using twitter data. International Journal of Information Management Data Insights, vol. 2, no. 2, p. 100113, 2022.
+
+15. Kolenik, T. and Gams, M., “Intelligent cognitive assistants for attitude and behavior change support in mental health: state-of-the-art technical review. Electronics, vol. 10, no. 11, p. 1250, 2021.
+
+16. Hungerbuehler, I., Daley, K., Cavanagh, K., Garcia Claro, H. and Kapps, M., “Chatbot-based assessment of employees' mental health: Design process and pilot implementation ”, JMIR Formative Research, vol. 5, no. 4, p. e21678, 2021.
+
+17. Potts, C., Lindström, F., Bond, R., Mulvenna, M., Booth, F., Ennis, E., Parding, K., Kostenius, C., Broderick, T., Boyd, K. and Vartiainen, A.K., “A multilingual digital mental health and well-being Chatbot (ChatPal): pre-post multicenter intervention study ”, Journal of Medical Internet Research, 25, p. e43051, 2023.
+
+18. Kleine, A.K., Lermer, E., Cecil, J., Heinrich, A. and Gaube, S., “Advancing Mental Health Care with AI- Enabled Precision Psychiatry Tools: A Patent Review ”, 2023.
+
+19. Pandey, S. and Sharma, S., “A comparative study of retrieval-based and generative-based chatbots using Deep Learning and Machine Learning ”, Healthcare Analytics, 3, p. 100198, 2023.
+
+20. Kim, J., Lee, J., Park, E. and Han, J., “A deep learning model for detecting mental illness from user content on social media ”, Scientific reports, 10 ( 1 ), p. 11846, 2020.
+
+21. Abd-Alrazaq, A. A., Alajlani, M., Alalwan, A.A., Bewick, B.M., Gardner, P. and Househ, M., “An overview of the features of chatbots in mental health: A scoping review. International Journal of Medical Informatics, vol. 132, p. 103978, 2019.
+
+22. Thieme, A., Hanratty, M., Lyons, M., Palacios, J., Marques, R.F., Morrison, C. and Doherty, G., “Designing human-centered AI for mental health: Developing clinically relevant applications for online CBT treatment ”, ACM Transactions on Computer-Human Interaction, vol. 30, no. 2, pp. 1–50, 2023.
+
+23. Schick, A., Feine, J., Morana, S., Maedche, A. and Reininghaus, U., “Validity of chatbot use for mental health assessment: experimental study ”, JMIR mHealth and uHealth, vol. 10, no. 10, p. e28082, 2022.
+
+24. Mariamo, A., Temcheff, C.E., Léger, P.M., Senecal, S. and Lau, M.A., “Emotional reactions and likelihood of response to questions designed for a mental health chatbot among adolescents: experimental study ”, JMIR human factors, 8 ( 1 ), p. e24343, 2021.
+
+25. HØiland, C.G., FØlstad, A. and Karahasanovic, A., “Hi, can I help? Exploring how to design a mental health chatbot for youths ”, Human Technology, vol. 16, no. 2, pp. 139–169, 2020.
+
+26. Rakib, A.B., Rumky, E.A., Ashraf, A.J., Hillas, M.M, Rahman, M.A., “Mental healthcare chatbot using sequence-to-sequence learning and bilstm ”, In International Conference on Brain Informatics (pp. 378–387 ). Cham : Springer International Publishing, 2021.
+
+27. Moilanen J, van Berkel N, Visuri A, Gadiraju U, van der Maden W, Hosio S. “Supporting mental health self-care discovery through a chatbot ”, Frontiers in Digital Health, vol. 5, 2023.
+
+28. Romanovskyi, O., Pidbutska, N. and Knysh, A., “Elomia Chatbot: The Effectiveness of Artificial Intelligence in the Fight for Mental Health ”, In COLINS, pp. 1215–1224, 2021.
+
+29. Ahmed, A., Ali, N., Aziz, S., Abd-Alrazaq, A.A., Hassan, A., Khalifa, M., Elhusein, B., Ahmed, M., Ahmed, M.A.S. and Househ, M., “A review of mobile chatbot apps for anxiety and depression and their self-care features ”, Computer Methods and Programs in Biomedicine Update, 1, p. 100012, 2021.
+
+30. Devaram, S., “Empathic chatbot: Emotional intelligence for empathic chatbot: Emotional intelligence for mental health well-being ”. arXiv preprint arXiv: 2012.09130, 2020.
+

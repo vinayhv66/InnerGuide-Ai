@@ -1,0 +1,453 @@
+Condition,County,Numerator,Denominator,BinRange,Diagnosis,DxSum,Rank
+Behavioral Health,Alameda,133,1,Less than 200,Mood disorders,43258,1
+Behavioral Health,Alameda,133,1,Less than 200,Anxiety disorders,30457,2
+Behavioral Health,Alameda,133,1,Less than 200,Alcohol-related disorders,23116,3
+Behavioral Health,Alameda,133,1,Less than 200,Schizophrenia and other psychotic disorders,18180,4
+Behavioral Health,Alameda,133,1,Less than 200,Stimulant-related disorders,13510,5
+Behavioral Health,Alameda,133,1,Less than 200,"Intentional self-harm, suicidal ideation, and suicide attempts",11275,6
+Behavioral Health,Alameda,133,1,Less than 200,Adjustment disorders,9710,7
+Behavioral Health,Alameda,133,1,Less than 200,Cannabis-related disorders,8098,8
+Behavioral Health,Alameda,133,1,Less than 200,Opioid-related disorders,7455,9
+Behavioral Health,Alameda,133,1,Less than 200,Miscellaneous mental health conditions,4628,10
+Behavioral Health,Alpine,0,0,Not applicable,Not applicable,0,0
+Behavioral Health,Amador and Calaveras,381,1,200 to 399,Anxiety disorders,1262,1
+Behavioral Health,Amador and Calaveras,381,1,200 to 399,Alcohol-related disorders,926,2
+Behavioral Health,Amador and Calaveras,381,1,200 to 399,Mood disorders,858,3
+Behavioral Health,Amador and Calaveras,381,1,200 to 399,Stimulant-related disorders,430,4
+Behavioral Health,Amador and Calaveras,381,1,200 to 399,Opioid-related disorders,404,5
+Behavioral Health,Amador and Calaveras,381,1,200 to 399,"Intentional self-harm, suicidal ideation, and suicide attempts",372,6
+Behavioral Health,Amador and Calaveras,381,1,200 to 399,Schizophrenia and other psychotic disorders,217,7
+Behavioral Health,Amador and Calaveras,381,1,200 to 399,Adjustment disorders,205,8
+Behavioral Health,Amador and Calaveras,381,1,200 to 399,Cannabis-related disorders,193,9
+Behavioral Health,Amador and Calaveras,381,1,200 to 399,Miscellaneous substance-related disorders,112,10
+Behavioral Health,Butte,473,1,400 to 599,Anxiety disorders,8454,1
+Behavioral Health,Butte,473,1,400 to 599,Mood disorders,8396,2
+Behavioral Health,Butte,473,1,400 to 599,Alcohol-related disorders,5391,3
+Behavioral Health,Butte,473,1,400 to 599,Stimulant-related disorders,3619,4
+Behavioral Health,Butte,473,1,400 to 599,Opioid-related disorders,3086,5
+Behavioral Health,Butte,473,1,400 to 599,Schizophrenia and other psychotic disorders,1863,6
+Behavioral Health,Butte,473,1,400 to 599,Cannabis-related disorders,1822,7
+Behavioral Health,Butte,473,1,400 to 599,Adjustment disorders,1601,8
+Behavioral Health,Butte,473,1,400 to 599,"Intentional self-harm, suicidal ideation, and suicide attempts",1594,9
+Behavioral Health,Butte,473,1,400 to 599,Miscellaneous mental health conditions,888,10
+Behavioral Health,Colusa and Glenn,1080,1,"1,000 and greater",Anxiety disorders,363,1
+Behavioral Health,Colusa and Glenn,1080,1,"1,000 and greater",Alcohol-related disorders,329,2
+Behavioral Health,Colusa and Glenn,1080,1,"1,000 and greater",Mood disorders,263,3
+Behavioral Health,Colusa and Glenn,1080,1,"1,000 and greater",Stimulant-related disorders,204,4
+Behavioral Health,Colusa and Glenn,1080,1,"1,000 and greater","Intentional self-harm, suicidal ideation, and suicide attempts",165,5
+Behavioral Health,Colusa and Glenn,1080,1,"1,000 and greater",Opioid-related disorders,108,6
+Behavioral Health,Colusa and Glenn,1080,1,"1,000 and greater",Cannabis-related disorders,94,7
+Behavioral Health,Colusa and Glenn,1080,1,"1,000 and greater",Miscellaneous substance-related disorders,72,8
+Behavioral Health,Colusa and Glenn,1080,1,"1,000 and greater",Schizophrenia and other psychotic disorders,61,9
+Behavioral Health,Colusa and Glenn,1080,1,"1,000 and greater",Adjustment disorders,26,10
+Behavioral Health,Contra Costa,120,1,Less than 200,Mood disorders,26287,1
+Behavioral Health,Contra Costa,120,1,Less than 200,Anxiety disorders,21612,2
+Behavioral Health,Contra Costa,120,1,Less than 200,Alcohol-related disorders,12442,3
+Behavioral Health,Contra Costa,120,1,Less than 200,Schizophrenia and other psychotic disorders,6964,4
+Behavioral Health,Contra Costa,120,1,Less than 200,Adjustment disorders,6011,5
+Behavioral Health,Contra Costa,120,1,Less than 200,Stimulant-related disorders,5485,6
+Behavioral Health,Contra Costa,120,1,Less than 200,"Intentional self-harm, suicidal ideation, and suicide attempts",5164,7
+Behavioral Health,Contra Costa,120,1,Less than 200,Opioid-related disorders,3383,8
+Behavioral Health,Contra Costa,120,1,Less than 200,Cannabis-related disorders,3225,9
+Behavioral Health,Contra Costa,120,1,Less than 200,Miscellaneous mental health conditions,2917,10
+Behavioral Health,"Del Norte, Humboldt, and Trinity",424,1,400 to 599,Anxiety disorders,4632,1
+Behavioral Health,"Del Norte, Humboldt, and Trinity",424,1,400 to 599,Mood disorders,4152,2
+Behavioral Health,"Del Norte, Humboldt, and Trinity",424,1,400 to 599,Alcohol-related disorders,3847,3
+Behavioral Health,"Del Norte, Humboldt, and Trinity",424,1,400 to 599,Stimulant-related disorders,2584,4
+Behavioral Health,"Del Norte, Humboldt, and Trinity",424,1,400 to 599,Cannabis-related disorders,2270,5
+Behavioral Health,"Del Norte, Humboldt, and Trinity",424,1,400 to 599,Miscellaneous substance-related disorders,2040,6
+Behavioral Health,"Del Norte, Humboldt, and Trinity",424,1,400 to 599,Opioid-related disorders,2018,7
+Behavioral Health,"Del Norte, Humboldt, and Trinity",424,1,400 to 599,Schizophrenia and other psychotic disorders,1234,8
+Behavioral Health,"Del Norte, Humboldt, and Trinity",424,1,400 to 599,"Intentional self-harm, suicidal ideation, and suicide attempts",930,9
+Behavioral Health,"Del Norte, Humboldt, and Trinity",424,1,400 to 599,Adjustment disorders,927,10
+Behavioral Health,El Dorado,192,1,Less than 200,Anxiety disorders,4244,1
+Behavioral Health,El Dorado,192,1,Less than 200,Mood disorders,3333,2
+Behavioral Health,El Dorado,192,1,Less than 200,Alcohol-related disorders,2829,3
+Behavioral Health,El Dorado,192,1,Less than 200,Opioid-related disorders,907,4
+Behavioral Health,El Dorado,192,1,Less than 200,Stimulant-related disorders,734,5
+Behavioral Health,El Dorado,192,1,Less than 200,Miscellaneous substance-related disorders,655,6
+Behavioral Health,El Dorado,192,1,Less than 200,"Intentional self-harm, suicidal ideation, and suicide attempts",641,7
+Behavioral Health,El Dorado,192,1,Less than 200,Schizophrenia and other psychotic disorders,603,8
+Behavioral Health,El Dorado,192,1,Less than 200,Cannabis-related disorders,592,9
+Behavioral Health,El Dorado,192,1,Less than 200,Adjustment disorders,293,10
+Behavioral Health,Fresno,163,1,Less than 200,Mood disorders,21427,1
+Behavioral Health,Fresno,163,1,Less than 200,Anxiety disorders,18366,2
+Behavioral Health,Fresno,163,1,Less than 200,Alcohol-related disorders,13192,3
+Behavioral Health,Fresno,163,1,Less than 200,Schizophrenia and other psychotic disorders,9473,4
+Behavioral Health,Fresno,163,1,Less than 200,Stimulant-related disorders,8089,5
+Behavioral Health,Fresno,163,1,Less than 200,"Intentional self-harm, suicidal ideation, and suicide attempts",5550,6
+Behavioral Health,Fresno,163,1,Less than 200,Cannabis-related disorders,3808,7
+Behavioral Health,Fresno,163,1,Less than 200,Adjustment disorders,3429,8
+Behavioral Health,Fresno,163,1,Less than 200,Opioid-related disorders,3181,9
+Behavioral Health,Fresno,163,1,Less than 200,Miscellaneous mental health conditions,2289,10
+Behavioral Health,Imperial,1379,1,"1,000 and greater",Anxiety disorders,2747,1
+Behavioral Health,Imperial,1379,1,"1,000 and greater",Mood disorders,1665,2
+Behavioral Health,Imperial,1379,1,"1,000 and greater",Opioid-related disorders,1059,3
+Behavioral Health,Imperial,1379,1,"1,000 and greater",Alcohol-related disorders,931,4
+Behavioral Health,Imperial,1379,1,"1,000 and greater",Stimulant-related disorders,696,5
+Behavioral Health,Imperial,1379,1,"1,000 and greater",Schizophrenia and other psychotic disorders,527,6
+Behavioral Health,Imperial,1379,1,"1,000 and greater",Cannabis-related disorders,454,7
+Behavioral Health,Imperial,1379,1,"1,000 and greater","Intentional self-harm, suicidal ideation, and suicide attempts",419,8
+Behavioral Health,Imperial,1379,1,"1,000 and greater",Adjustment disorders,270,9
+Behavioral Health,Imperial,1379,1,"1,000 and greater",Miscellaneous substance-related disorders,212,10
+Behavioral Health,Inyo and Mono,1249,1,"1,000 and greater",Alcohol-related disorders,634,1
+Behavioral Health,Inyo and Mono,1249,1,"1,000 and greater",Anxiety disorders,577,2
+Behavioral Health,Inyo and Mono,1249,1,"1,000 and greater",Mood disorders,388,3
+Behavioral Health,Inyo and Mono,1249,1,"1,000 and greater",Cannabis-related disorders,197,4
+Behavioral Health,Inyo and Mono,1249,1,"1,000 and greater",Stimulant-related disorders,163,5
+Behavioral Health,Inyo and Mono,1249,1,"1,000 and greater",Adjustment disorders,103,6
+Behavioral Health,Inyo and Mono,1249,1,"1,000 and greater",Opioid-related disorders,99,7
+Behavioral Health,Inyo and Mono,1249,1,"1,000 and greater","Intentional self-harm, suicidal ideation, and suicide attempts",93,8
+Behavioral Health,Inyo and Mono,1249,1,"1,000 and greater",Schizophrenia and other psychotic disorders,81,9
+Behavioral Health,Inyo and Mono,1249,1,"1,000 and greater",Miscellaneous mental health conditions,80,10
+Behavioral Health,Kern,286,1,200 to 399,Anxiety disorders,18287,1
+Behavioral Health,Kern,286,1,200 to 399,Mood disorders,15150,2
+Behavioral Health,Kern,286,1,200 to 399,Alcohol-related disorders,10688,3
+Behavioral Health,Kern,286,1,200 to 399,Stimulant-related disorders,9731,4
+Behavioral Health,Kern,286,1,200 to 399,Cannabis-related disorders,6636,5
+Behavioral Health,Kern,286,1,200 to 399,Schizophrenia and other psychotic disorders,6187,6
+Behavioral Health,Kern,286,1,200 to 399,"Intentional self-harm, suicidal ideation, and suicide attempts",5918,7
+Behavioral Health,Kern,286,1,200 to 399,Opioid-related disorders,5092,8
+Behavioral Health,Kern,286,1,200 to 399,Adjustment disorders,3555,9
+Behavioral Health,Kern,286,1,200 to 399,Miscellaneous substance-related disorders,3506,10
+Behavioral Health,Kings and Tulare,168,1,Less than 200,Anxiety disorders,12008,1
+Behavioral Health,Kings and Tulare,168,1,Less than 200,Mood disorders,10441,2
+Behavioral Health,Kings and Tulare,168,1,Less than 200,Alcohol-related disorders,6664,3
+Behavioral Health,Kings and Tulare,168,1,Less than 200,Stimulant-related disorders,5313,4
+Behavioral Health,Kings and Tulare,168,1,Less than 200,Schizophrenia and other psychotic disorders,4718,5
+Behavioral Health,Kings and Tulare,168,1,Less than 200,"Intentional self-harm, suicidal ideation, and suicide attempts",3582,6
+Behavioral Health,Kings and Tulare,168,1,Less than 200,Adjustment disorders,2968,7
+Behavioral Health,Kings and Tulare,168,1,Less than 200,Cannabis-related disorders,2575,8
+Behavioral Health,Kings and Tulare,168,1,Less than 200,Opioid-related disorders,2274,9
+Behavioral Health,Kings and Tulare,168,1,Less than 200,Miscellaneous substance-related disorders,1073,10
+Behavioral Health,Lake,1097,1,"1,000 and greater",Anxiety disorders,1445,1
+Behavioral Health,Lake,1097,1,"1,000 and greater",Alcohol-related disorders,1363,2
+Behavioral Health,Lake,1097,1,"1,000 and greater",Mood disorders,1055,3
+Behavioral Health,Lake,1097,1,"1,000 and greater",Stimulant-related disorders,937,4
+Behavioral Health,Lake,1097,1,"1,000 and greater",Cannabis-related disorders,598,5
+Behavioral Health,Lake,1097,1,"1,000 and greater",Opioid-related disorders,432,6
+Behavioral Health,Lake,1097,1,"1,000 and greater",Schizophrenia and other psychotic disorders,370,7
+Behavioral Health,Lake,1097,1,"1,000 and greater","Intentional self-harm, suicidal ideation, and suicide attempts",340,8
+Behavioral Health,Lake,1097,1,"1,000 and greater",Miscellaneous substance-related disorders,292,9
+Behavioral Health,Lake,1097,1,"1,000 and greater",Adjustment disorders,267,10
+Behavioral Health,Lassen and Modoc,1548,1,"1,000 and greater",Anxiety disorders,544,1
+Behavioral Health,Lassen and Modoc,1548,1,"1,000 and greater",Alcohol-related disorders,510,2
+Behavioral Health,Lassen and Modoc,1548,1,"1,000 and greater",Mood disorders,370,3
+Behavioral Health,Lassen and Modoc,1548,1,"1,000 and greater",Stimulant-related disorders,212,4
+Behavioral Health,Lassen and Modoc,1548,1,"1,000 and greater",Opioid-related disorders,181,5
+Behavioral Health,Lassen and Modoc,1548,1,"1,000 and greater","Intentional self-harm, suicidal ideation, and suicide attempts",166,6
+Behavioral Health,Lassen and Modoc,1548,1,"1,000 and greater",Schizophrenia and other psychotic disorders,135,7
+Behavioral Health,Lassen and Modoc,1548,1,"1,000 and greater",Cannabis-related disorders,78,8
+Behavioral Health,Lassen and Modoc,1548,1,"1,000 and greater",Adjustment disorders,72,9
+Behavioral Health,Lassen and Modoc,1548,1,"1,000 and greater",Miscellaneous substance-related disorders,60,10
+Behavioral Health,Los Angeles,132,1,Less than 200,Mood disorders,195498,1
+Behavioral Health,Los Angeles,132,1,Less than 200,Anxiety disorders,180829,2
+Behavioral Health,Los Angeles,132,1,Less than 200,Alcohol-related disorders,134071,3
+Behavioral Health,Los Angeles,132,1,Less than 200,Schizophrenia and other psychotic disorders,113590,4
+Behavioral Health,Los Angeles,132,1,Less than 200,Stimulant-related disorders,81932,5
+Behavioral Health,Los Angeles,132,1,Less than 200,"Intentional self-harm, suicidal ideation, and suicide attempts",81192,6
+Behavioral Health,Los Angeles,132,1,Less than 200,Cannabis-related disorders,62791,7
+Behavioral Health,Los Angeles,132,1,Less than 200,Opioid-related disorders,37149,8
+Behavioral Health,Los Angeles,132,1,Less than 200,Adjustment disorders,28297,9
+Behavioral Health,Los Angeles,132,1,Less than 200,Miscellaneous substance-related disorders,27545,10
+Behavioral Health,Madera,65,1,Less than 200,Anxiety disorders,995,1
+Behavioral Health,Madera,65,1,Less than 200,Mood disorders,694,2
+Behavioral Health,Madera,65,1,Less than 200,"Intentional self-harm, suicidal ideation, and suicide attempts",541,3
+Behavioral Health,Madera,65,1,Less than 200,Cannabis-related disorders,358,4
+Behavioral Health,Madera,65,1,Less than 200,Adjustment disorders,229,5
+Behavioral Health,Madera,65,1,Less than 200,Miscellaneous mental health conditions,120,6
+Behavioral Health,Madera,65,1,Less than 200,Schizophrenia and other psychotic disorders,91,7
+Behavioral Health,Madera,65,1,Less than 200,Alcohol-related disorders,86,8
+Behavioral Health,Madera,65,1,Less than 200,Impulse control disorders not elsewhere classified,66,9
+Behavioral Health,Madera,65,1,Less than 200,Opioid-related disorders,65,10
+Behavioral Health,Marin,127,1,Less than 200,Mood disorders,7039,1
+Behavioral Health,Marin,127,1,Less than 200,Anxiety disorders,5668,2
+Behavioral Health,Marin,127,1,Less than 200,Alcohol-related disorders,4311,3
+Behavioral Health,Marin,127,1,Less than 200,Schizophrenia and other psychotic disorders,1187,4
+Behavioral Health,Marin,127,1,Less than 200,Stimulant-related disorders,1097,5
+Behavioral Health,Marin,127,1,Less than 200,Adjustment disorders,995,6
+Behavioral Health,Marin,127,1,Less than 200,Opioid-related disorders,955,7
+Behavioral Health,Marin,127,1,Less than 200,"Intentional self-harm, suicidal ideation, and suicide attempts",875,8
+Behavioral Health,Marin,127,1,Less than 200,Miscellaneous mental health conditions,594,9
+Behavioral Health,Marin,127,1,Less than 200,Cannabis-related disorders,574,10
+Behavioral Health,Mariposa and Tuolumne,308,1,200 to 399,Alcohol-related disorders,1352,1
+Behavioral Health,Mariposa and Tuolumne,308,1,200 to 399,Anxiety disorders,1345,2
+Behavioral Health,Mariposa and Tuolumne,308,1,200 to 399,Mood disorders,1179,3
+Behavioral Health,Mariposa and Tuolumne,308,1,200 to 399,Opioid-related disorders,502,4
+Behavioral Health,Mariposa and Tuolumne,308,1,200 to 399,Stimulant-related disorders,481,5
+Behavioral Health,Mariposa and Tuolumne,308,1,200 to 399,"Intentional self-harm, suicidal ideation, and suicide attempts",429,6
+Behavioral Health,Mariposa and Tuolumne,308,1,200 to 399,Cannabis-related disorders,279,7
+Behavioral Health,Mariposa and Tuolumne,308,1,200 to 399,Schizophrenia and other psychotic disorders,228,8
+Behavioral Health,Mariposa and Tuolumne,308,1,200 to 399,Miscellaneous substance-related disorders,204,9
+Behavioral Health,Mariposa and Tuolumne,308,1,200 to 399,Adjustment disorders,137,10
+Behavioral Health,Mendocino,3057,1,"1,000 and greater",Anxiety disorders,2364,1
+Behavioral Health,Mendocino,3057,1,"1,000 and greater",Alcohol-related disorders,2006,2
+Behavioral Health,Mendocino,3057,1,"1,000 and greater",Mood disorders,1663,3
+Behavioral Health,Mendocino,3057,1,"1,000 and greater",Stimulant-related disorders,1144,4
+Behavioral Health,Mendocino,3057,1,"1,000 and greater",Cannabis-related disorders,1131,5
+Behavioral Health,Mendocino,3057,1,"1,000 and greater",Opioid-related disorders,885,6
+Behavioral Health,Mendocino,3057,1,"1,000 and greater",Schizophrenia and other psychotic disorders,729,7
+Behavioral Health,Mendocino,3057,1,"1,000 and greater","Intentional self-harm, suicidal ideation, and suicide attempts",513,8
+Behavioral Health,Mendocino,3057,1,"1,000 and greater",Adjustment disorders,349,9
+Behavioral Health,Mendocino,3057,1,"1,000 and greater",Miscellaneous substance-related disorders,301,10
+Behavioral Health,Merced,388,1,200 to 399,Anxiety disorders,3820,1
+Behavioral Health,Merced,388,1,200 to 399,Mood disorders,2350,2
+Behavioral Health,Merced,388,1,200 to 399,Alcohol-related disorders,2190,3
+Behavioral Health,Merced,388,1,200 to 399,Stimulant-related disorders,1758,4
+Behavioral Health,Merced,388,1,200 to 399,Schizophrenia and other psychotic disorders,1533,5
+Behavioral Health,Merced,388,1,200 to 399,"Intentional self-harm, suicidal ideation, and suicide attempts",1364,6
+Behavioral Health,Merced,388,1,200 to 399,Cannabis-related disorders,1178,7
+Behavioral Health,Merced,388,1,200 to 399,Miscellaneous mental health conditions,614,8
+Behavioral Health,Merced,388,1,200 to 399,Opioid-related disorders,612,9
+Behavioral Health,Merced,388,1,200 to 399,Adjustment disorders,484,10
+Behavioral Health,Monterey and San Benito,254,1,200 to 399,Anxiety disorders,14105,1
+Behavioral Health,Monterey and San Benito,254,1,200 to 399,Mood disorders,13119,2
+Behavioral Health,Monterey and San Benito,254,1,200 to 399,Alcohol-related disorders,7952,3
+Behavioral Health,Monterey and San Benito,254,1,200 to 399,Cannabis-related disorders,4124,4
+Behavioral Health,Monterey and San Benito,254,1,200 to 399,Stimulant-related disorders,4065,5
+Behavioral Health,Monterey and San Benito,254,1,200 to 399,Schizophrenia and other psychotic disorders,3962,6
+Behavioral Health,Monterey and San Benito,254,1,200 to 399,Opioid-related disorders,2887,7
+Behavioral Health,Monterey and San Benito,254,1,200 to 399,Adjustment disorders,2723,8
+Behavioral Health,Monterey and San Benito,254,1,200 to 399,"Intentional self-harm, suicidal ideation, and suicide attempts",2288,9
+Behavioral Health,Monterey and San Benito,254,1,200 to 399,Miscellaneous substance-related disorders,1372,10
+Behavioral Health,Napa,34,1,Less than 200,Mood disorders,2240,1
+Behavioral Health,Napa,34,1,Less than 200,Anxiety disorders,2215,2
+Behavioral Health,Napa,34,1,Less than 200,Alcohol-related disorders,2008,3
+Behavioral Health,Napa,34,1,Less than 200,Stimulant-related disorders,998,4
+Behavioral Health,Napa,34,1,Less than 200,Schizophrenia and other psychotic disorders,901,5
+Behavioral Health,Napa,34,1,Less than 200,"Intentional self-harm, suicidal ideation, and suicide attempts",743,6
+Behavioral Health,Napa,34,1,Less than 200,Cannabis-related disorders,635,7
+Behavioral Health,Napa,34,1,Less than 200,Opioid-related disorders,495,8
+Behavioral Health,Napa,34,1,Less than 200,Adjustment disorders,430,9
+Behavioral Health,Napa,34,1,Less than 200,Miscellaneous substance-related disorders,323,10
+Behavioral Health,Nevada,333,1,200 to 399,Alcohol-related disorders,1940,1
+Behavioral Health,Nevada,333,1,200 to 399,Anxiety disorders,1620,2
+Behavioral Health,Nevada,333,1,200 to 399,Mood disorders,1214,3
+Behavioral Health,Nevada,333,1,200 to 399,"Intentional self-harm, suicidal ideation, and suicide attempts",537,4
+Behavioral Health,Nevada,333,1,200 to 399,Opioid-related disorders,519,5
+Behavioral Health,Nevada,333,1,200 to 399,Stimulant-related disorders,481,6
+Behavioral Health,Nevada,333,1,200 to 399,Cannabis-related disorders,406,7
+Behavioral Health,Nevada,333,1,200 to 399,Schizophrenia and other psychotic disorders,323,8
+Behavioral Health,Nevada,333,1,200 to 399,Miscellaneous mental health conditions,291,9
+Behavioral Health,Nevada,333,1,200 to 399,Miscellaneous substance-related disorders,252,10
+Behavioral Health,Orange,116,1,Less than 200,Mood disorders,65007,1
+Behavioral Health,Orange,116,1,Less than 200,Anxiety disorders,64765,2
+Behavioral Health,Orange,116,1,Less than 200,Alcohol-related disorders,44575,3
+Behavioral Health,Orange,116,1,Less than 200,Schizophrenia and other psychotic disorders,21874,4
+Behavioral Health,Orange,116,1,Less than 200,Stimulant-related disorders,19391,5
+Behavioral Health,Orange,116,1,Less than 200,Cannabis-related disorders,17456,6
+Behavioral Health,Orange,116,1,Less than 200,"Intentional self-harm, suicidal ideation, and suicide attempts",17199,7
+Behavioral Health,Orange,116,1,Less than 200,Opioid-related disorders,15081,8
+Behavioral Health,Orange,116,1,Less than 200,Adjustment disorders,9013,9
+Behavioral Health,Orange,116,1,Less than 200,Miscellaneous substance-related disorders,7380,10
+Behavioral Health,Placer,205,1,200 to 399,Mood disorders,16787,1
+Behavioral Health,Placer,205,1,200 to 399,Anxiety disorders,14169,2
+Behavioral Health,Placer,205,1,200 to 399,Alcohol-related disorders,7378,3
+Behavioral Health,Placer,205,1,200 to 399,"Intentional self-harm, suicidal ideation, and suicide attempts",3171,4
+Behavioral Health,Placer,205,1,200 to 399,Adjustment disorders,2952,5
+Behavioral Health,Placer,205,1,200 to 399,Miscellaneous mental health conditions,2629,6
+Behavioral Health,Placer,205,1,200 to 399,Schizophrenia and other psychotic disorders,2329,7
+Behavioral Health,Placer,205,1,200 to 399,Stimulant-related disorders,2269,8
+Behavioral Health,Placer,205,1,200 to 399,Cannabis-related disorders,1985,9
+Behavioral Health,Placer,205,1,200 to 399,Opioid-related disorders,1768,10
+Behavioral Health,Plumas and Tehama,607,1,600 to 799,Anxiety disorders,1558,1
+Behavioral Health,Plumas and Tehama,607,1,600 to 799,Mood disorders,1358,2
+Behavioral Health,Plumas and Tehama,607,1,600 to 799,Alcohol-related disorders,1256,3
+Behavioral Health,Plumas and Tehama,607,1,600 to 799,Stimulant-related disorders,663,4
+Behavioral Health,Plumas and Tehama,607,1,600 to 799,Schizophrenia and other psychotic disorders,519,5
+Behavioral Health,Plumas and Tehama,607,1,600 to 799,Cannabis-related disorders,437,6
+Behavioral Health,Plumas and Tehama,607,1,600 to 799,Opioid-related disorders,364,7
+Behavioral Health,Plumas and Tehama,607,1,600 to 799,"Intentional self-harm, suicidal ideation, and suicide attempts",338,8
+Behavioral Health,Plumas and Tehama,607,1,600 to 799,Adjustment disorders,300,9
+Behavioral Health,Plumas and Tehama,607,1,600 to 799,Miscellaneous substance-related disorders,197,10
+Behavioral Health,Riverside,138,1,Less than 200,Anxiety disorders,45318,1
+Behavioral Health,Riverside,138,1,Less than 200,Mood disorders,37842,2
+Behavioral Health,Riverside,138,1,Less than 200,Alcohol-related disorders,31369,3
+Behavioral Health,Riverside,138,1,Less than 200,Stimulant-related disorders,17548,4
+Behavioral Health,Riverside,138,1,Less than 200,Schizophrenia and other psychotic disorders,13904,5
+Behavioral Health,Riverside,138,1,Less than 200,Cannabis-related disorders,13294,6
+Behavioral Health,Riverside,138,1,Less than 200,Opioid-related disorders,10319,7
+Behavioral Health,Riverside,138,1,Less than 200,"Intentional self-harm, suicidal ideation, and suicide attempts",10126,8
+Behavioral Health,Riverside,138,1,Less than 200,Adjustment disorders,6409,9
+Behavioral Health,Riverside,138,1,Less than 200,Miscellaneous substance-related disorders,6061,10
+Behavioral Health,Sacramento,142,1,Less than 200,Mood disorders,47853,1
+Behavioral Health,Sacramento,142,1,Less than 200,Anxiety disorders,34901,2
+Behavioral Health,Sacramento,142,1,Less than 200,Alcohol-related disorders,21763,3
+Behavioral Health,Sacramento,142,1,Less than 200,Schizophrenia and other psychotic disorders,19700,4
+Behavioral Health,Sacramento,142,1,Less than 200,"Intentional self-harm, suicidal ideation, and suicide attempts",18104,5
+Behavioral Health,Sacramento,142,1,Less than 200,Stimulant-related disorders,16960,6
+Behavioral Health,Sacramento,142,1,Less than 200,Cannabis-related disorders,11396,7
+Behavioral Health,Sacramento,142,1,Less than 200,Adjustment disorders,8665,8
+Behavioral Health,Sacramento,142,1,Less than 200,Opioid-related disorders,8536,9
+Behavioral Health,Sacramento,142,1,Less than 200,Miscellaneous mental health conditions,4231,10
+Behavioral Health,San Bernardino,128,1,Less than 200,Anxiety disorders,44223,1
+Behavioral Health,San Bernardino,128,1,Less than 200,Mood disorders,43714,2
+Behavioral Health,San Bernardino,128,1,Less than 200,Alcohol-related disorders,29210,3
+Behavioral Health,San Bernardino,128,1,Less than 200,Cannabis-related disorders,24718,4
+Behavioral Health,San Bernardino,128,1,Less than 200,Stimulant-related disorders,22939,5
+Behavioral Health,San Bernardino,128,1,Less than 200,"Intentional self-harm, suicidal ideation, and suicide attempts",21564,6
+Behavioral Health,San Bernardino,128,1,Less than 200,Schizophrenia and other psychotic disorders,20845,7
+Behavioral Health,San Bernardino,128,1,Less than 200,Opioid-related disorders,10724,8
+Behavioral Health,San Bernardino,128,1,Less than 200,Adjustment disorders,8355,9
+Behavioral Health,San Bernardino,128,1,Less than 200,Miscellaneous substance-related disorders,5327,10
+Behavioral Health,San Diego,134,1,Less than 200,Mood disorders,89379,1
+Behavioral Health,San Diego,134,1,Less than 200,Anxiety disorders,82954,2
+Behavioral Health,San Diego,134,1,Less than 200,Alcohol-related disorders,55218,3
+Behavioral Health,San Diego,134,1,Less than 200,Schizophrenia and other psychotic disorders,32071,4
+Behavioral Health,San Diego,134,1,Less than 200,Stimulant-related disorders,29581,5
+Behavioral Health,San Diego,134,1,Less than 200,Cannabis-related disorders,29538,6
+Behavioral Health,San Diego,134,1,Less than 200,"Intentional self-harm, suicidal ideation, and suicide attempts",25018,7
+Behavioral Health,San Diego,134,1,Less than 200,Opioid-related disorders,17591,8
+Behavioral Health,San Diego,134,1,Less than 200,Adjustment disorders,14956,9
+Behavioral Health,San Diego,134,1,Less than 200,Miscellaneous mental health conditions,8953,10
+Behavioral Health,San Francisco,162,1,Less than 200,Mood disorders,22360,1
+Behavioral Health,San Francisco,162,1,Less than 200,Anxiety disorders,18320,2
+Behavioral Health,San Francisco,162,1,Less than 200,Alcohol-related disorders,16520,3
+Behavioral Health,San Francisco,162,1,Less than 200,Stimulant-related disorders,13889,4
+Behavioral Health,San Francisco,162,1,Less than 200,Opioid-related disorders,10367,5
+Behavioral Health,San Francisco,162,1,Less than 200,Schizophrenia and other psychotic disorders,9360,6
+Behavioral Health,San Francisco,162,1,Less than 200,"Intentional self-harm, suicidal ideation, and suicide attempts",6439,7
+Behavioral Health,San Francisco,162,1,Less than 200,Adjustment disorders,4806,8
+Behavioral Health,San Francisco,162,1,Less than 200,Miscellaneous substance-related disorders,4080,9
+Behavioral Health,San Francisco,162,1,Less than 200,Cannabis-related disorders,3905,10
+Behavioral Health,San Joaquin,305,1,200 to 399,Anxiety disorders,17287,1
+Behavioral Health,San Joaquin,305,1,200 to 399,Mood disorders,16541,2
+Behavioral Health,San Joaquin,305,1,200 to 399,Alcohol-related disorders,10496,3
+Behavioral Health,San Joaquin,305,1,200 to 399,Cannabis-related disorders,7931,4
+Behavioral Health,San Joaquin,305,1,200 to 399,Stimulant-related disorders,6617,5
+Behavioral Health,San Joaquin,305,1,200 to 399,Schizophrenia and other psychotic disorders,5419,6
+Behavioral Health,San Joaquin,305,1,200 to 399,"Intentional self-harm, suicidal ideation, and suicide attempts",4075,7
+Behavioral Health,San Joaquin,305,1,200 to 399,Opioid-related disorders,3617,8
+Behavioral Health,San Joaquin,305,1,200 to 399,Adjustment disorders,3278,9
+Behavioral Health,San Joaquin,305,1,200 to 399,Miscellaneous substance-related disorders,1905,10
+Behavioral Health,San Luis Obispo,96,1,Less than 200,Anxiety disorders,4618,1
+Behavioral Health,San Luis Obispo,96,1,Less than 200,Alcohol-related disorders,4192,2
+Behavioral Health,San Luis Obispo,96,1,Less than 200,Mood disorders,4151,3
+Behavioral Health,San Luis Obispo,96,1,Less than 200,Opioid-related disorders,1403,4
+Behavioral Health,San Luis Obispo,96,1,Less than 200,"Intentional self-harm, suicidal ideation, and suicide attempts",1289,5
+Behavioral Health,San Luis Obispo,96,1,Less than 200,Stimulant-related disorders,1241,6
+Behavioral Health,San Luis Obispo,96,1,Less than 200,Schizophrenia and other psychotic disorders,1188,7
+Behavioral Health,San Luis Obispo,96,1,Less than 200,Cannabis-related disorders,933,8
+Behavioral Health,San Luis Obispo,96,1,Less than 200,Adjustment disorders,678,9
+Behavioral Health,San Luis Obispo,96,1,Less than 200,Miscellaneous mental health conditions,640,10
+Behavioral Health,San Mateo,118,1,Less than 200,Mood disorders,11608,1
+Behavioral Health,San Mateo,118,1,Less than 200,Anxiety disorders,10134,2
+Behavioral Health,San Mateo,118,1,Less than 200,Alcohol-related disorders,7750,3
+Behavioral Health,San Mateo,118,1,Less than 200,Schizophrenia and other psychotic disorders,3601,4
+Behavioral Health,San Mateo,118,1,Less than 200,Stimulant-related disorders,2851,5
+Behavioral Health,San Mateo,118,1,Less than 200,"Intentional self-harm, suicidal ideation, and suicide attempts",2691,6
+Behavioral Health,San Mateo,118,1,Less than 200,Adjustment disorders,2377,7
+Behavioral Health,San Mateo,118,1,Less than 200,Cannabis-related disorders,1855,8
+Behavioral Health,San Mateo,118,1,Less than 200,Opioid-related disorders,1636,9
+Behavioral Health,San Mateo,118,1,Less than 200,Miscellaneous mental health conditions,1245,10
+Behavioral Health,Santa Barbara,254,1,200 to 399,Anxiety disorders,10780,1
+Behavioral Health,Santa Barbara,254,1,200 to 399,Mood disorders,10409,2
+Behavioral Health,Santa Barbara,254,1,200 to 399,Alcohol-related disorders,9010,3
+Behavioral Health,Santa Barbara,254,1,200 to 399,Stimulant-related disorders,3255,4
+Behavioral Health,Santa Barbara,254,1,200 to 399,Cannabis-related disorders,2761,5
+Behavioral Health,Santa Barbara,254,1,200 to 399,Schizophrenia and other psychotic disorders,2735,6
+Behavioral Health,Santa Barbara,254,1,200 to 399,Opioid-related disorders,2536,7
+Behavioral Health,Santa Barbara,254,1,200 to 399,Adjustment disorders,1967,8
+Behavioral Health,Santa Barbara,254,1,200 to 399,"Intentional self-harm, suicidal ideation, and suicide attempts",1941,9
+Behavioral Health,Santa Barbara,254,1,200 to 399,Miscellaneous substance-related disorders,1227,10
+Behavioral Health,Santa Clara,135,1,Less than 200,Mood disorders,40025,1
+Behavioral Health,Santa Clara,135,1,Less than 200,Anxiety disorders,36234,2
+Behavioral Health,Santa Clara,135,1,Less than 200,Alcohol-related disorders,20878,3
+Behavioral Health,Santa Clara,135,1,Less than 200,Schizophrenia and other psychotic disorders,10017,4
+Behavioral Health,Santa Clara,135,1,Less than 200,Stimulant-related disorders,9626,5
+Behavioral Health,Santa Clara,135,1,Less than 200,"Intentional self-harm, suicidal ideation, and suicide attempts",7867,6
+Behavioral Health,Santa Clara,135,1,Less than 200,Adjustment disorders,7798,7
+Behavioral Health,Santa Clara,135,1,Less than 200,Cannabis-related disorders,5666,8
+Behavioral Health,Santa Clara,135,1,Less than 200,Miscellaneous mental health conditions,4808,9
+Behavioral Health,Santa Clara,135,1,Less than 200,Opioid-related disorders,4379,10
+Behavioral Health,Santa Cruz,151,1,Less than 200,Alcohol-related disorders,4463,1
+Behavioral Health,Santa Cruz,151,1,Less than 200,Anxiety disorders,4269,2
+Behavioral Health,Santa Cruz,151,1,Less than 200,Mood disorders,3601,3
+Behavioral Health,Santa Cruz,151,1,Less than 200,Stimulant-related disorders,1661,4
+Behavioral Health,Santa Cruz,151,1,Less than 200,Opioid-related disorders,1574,5
+Behavioral Health,Santa Cruz,151,1,Less than 200,Schizophrenia and other psychotic disorders,1150,6
+Behavioral Health,Santa Cruz,151,1,Less than 200,Cannabis-related disorders,974,7
+Behavioral Health,Santa Cruz,151,1,Less than 200,"Intentional self-harm, suicidal ideation, and suicide attempts",762,8
+Behavioral Health,Santa Cruz,151,1,Less than 200,Miscellaneous substance-related disorders,719,9
+Behavioral Health,Santa Cruz,151,1,Less than 200,Adjustment disorders,594,10
+Behavioral Health,Shasta,376,1,200 to 399,Mood disorders,7325,1
+Behavioral Health,Shasta,376,1,200 to 399,Anxiety disorders,6750,2
+Behavioral Health,Shasta,376,1,200 to 399,Cannabis-related disorders,4698,3
+Behavioral Health,Shasta,376,1,200 to 399,Stimulant-related disorders,4426,4
+Behavioral Health,Shasta,376,1,200 to 399,Alcohol-related disorders,3876,5
+Behavioral Health,Shasta,376,1,200 to 399,Opioid-related disorders,2047,6
+Behavioral Health,Shasta,376,1,200 to 399,Schizophrenia and other psychotic disorders,1724,7
+Behavioral Health,Shasta,376,1,200 to 399,"Intentional self-harm, suicidal ideation, and suicide attempts",1396,8
+Behavioral Health,Shasta,376,1,200 to 399,Adjustment disorders,842,9
+Behavioral Health,Shasta,376,1,200 to 399,Miscellaneous substance-related disorders,649,10
+Behavioral Health,Sierra,0,0,Not applicable,Not applicable,0,0
+Behavioral Health,Siskiyou,1084,1,"1,000 and greater",Anxiety disorders,958,1
+Behavioral Health,Siskiyou,1084,1,"1,000 and greater",Mood disorders,873,2
+Behavioral Health,Siskiyou,1084,1,"1,000 and greater",Alcohol-related disorders,784,3
+Behavioral Health,Siskiyou,1084,1,"1,000 and greater",Cannabis-related disorders,783,4
+Behavioral Health,Siskiyou,1084,1,"1,000 and greater",Stimulant-related disorders,553,5
+Behavioral Health,Siskiyou,1084,1,"1,000 and greater",Opioid-related disorders,260,6
+Behavioral Health,Siskiyou,1084,1,"1,000 and greater","Intentional self-harm, suicidal ideation, and suicide attempts",258,7
+Behavioral Health,Siskiyou,1084,1,"1,000 and greater",Schizophrenia and other psychotic disorders,202,8
+Behavioral Health,Siskiyou,1084,1,"1,000 and greater",Adjustment disorders,184,9
+Behavioral Health,Siskiyou,1084,1,"1,000 and greater",Miscellaneous substance-related disorders,175,10
+Behavioral Health,Solano,97,1,Less than 200,Mood disorders,13676,1
+Behavioral Health,Solano,97,1,Less than 200,Anxiety disorders,10927,2
+Behavioral Health,Solano,97,1,Less than 200,Alcohol-related disorders,6069,3
+Behavioral Health,Solano,97,1,Less than 200,Schizophrenia and other psychotic disorders,3467,4
+Behavioral Health,Solano,97,1,Less than 200,Stimulant-related disorders,3241,5
+Behavioral Health,Solano,97,1,Less than 200,Adjustment disorders,3142,6
+Behavioral Health,Solano,97,1,Less than 200,"Intentional self-harm, suicidal ideation, and suicide attempts",2872,7
+Behavioral Health,Solano,97,1,Less than 200,Cannabis-related disorders,2401,8
+Behavioral Health,Solano,97,1,Less than 200,Opioid-related disorders,1675,9
+Behavioral Health,Solano,97,1,Less than 200,Miscellaneous mental health conditions,1640,10
+Behavioral Health,Sonoma,194,1,Less than 200,Mood disorders,15439,1
+Behavioral Health,Sonoma,194,1,Less than 200,Anxiety disorders,11519,2
+Behavioral Health,Sonoma,194,1,Less than 200,Alcohol-related disorders,8714,3
+Behavioral Health,Sonoma,194,1,Less than 200,"Intentional self-harm, suicidal ideation, and suicide attempts",4769,4
+Behavioral Health,Sonoma,194,1,Less than 200,Schizophrenia and other psychotic disorders,3928,5
+Behavioral Health,Sonoma,194,1,Less than 200,Stimulant-related disorders,3870,6
+Behavioral Health,Sonoma,194,1,Less than 200,Adjustment disorders,3235,7
+Behavioral Health,Sonoma,194,1,Less than 200,Cannabis-related disorders,2557,8
+Behavioral Health,Sonoma,194,1,Less than 200,Opioid-related disorders,2186,9
+Behavioral Health,Sonoma,194,1,Less than 200,Miscellaneous mental health conditions,1781,10
+Behavioral Health,Stanislaus,275,1,200 to 399,Anxiety disorders,11141,1
+Behavioral Health,Stanislaus,275,1,200 to 399,Mood disorders,9113,2
+Behavioral Health,Stanislaus,275,1,200 to 399,Alcohol-related disorders,8145,3
+Behavioral Health,Stanislaus,275,1,200 to 399,Stimulant-related disorders,6156,4
+Behavioral Health,Stanislaus,275,1,200 to 399,"Intentional self-harm, suicidal ideation, and suicide attempts",5044,5
+Behavioral Health,Stanislaus,275,1,200 to 399,Schizophrenia and other psychotic disorders,4418,6
+Behavioral Health,Stanislaus,275,1,200 to 399,Cannabis-related disorders,3230,7
+Behavioral Health,Stanislaus,275,1,200 to 399,Opioid-related disorders,3200,8
+Behavioral Health,Stanislaus,275,1,200 to 399,Miscellaneous substance-related disorders,1741,9
+Behavioral Health,Stanislaus,275,1,200 to 399,Adjustment disorders,1645,10
+Behavioral Health,Sutter and Yuba,468,1,400 to 599,Mood disorders,2935,1
+Behavioral Health,Sutter and Yuba,468,1,400 to 599,Alcohol-related disorders,2614,2
+Behavioral Health,Sutter and Yuba,468,1,400 to 599,Anxiety disorders,2553,3
+Behavioral Health,Sutter and Yuba,468,1,400 to 599,Stimulant-related disorders,1742,4
+Behavioral Health,Sutter and Yuba,468,1,400 to 599,"Intentional self-harm, suicidal ideation, and suicide attempts",1527,5
+Behavioral Health,Sutter and Yuba,468,1,400 to 599,Opioid-related disorders,1212,6
+Behavioral Health,Sutter and Yuba,468,1,400 to 599,Cannabis-related disorders,1058,7
+Behavioral Health,Sutter and Yuba,468,1,400 to 599,Schizophrenia and other psychotic disorders,1028,8
+Behavioral Health,Sutter and Yuba,468,1,400 to 599,Miscellaneous substance-related disorders,499,9
+Behavioral Health,Sutter and Yuba,468,1,400 to 599,Adjustment disorders,354,10
+Behavioral Health,Ventura,181,1,Less than 200,Anxiety disorders,20107,1
+Behavioral Health,Ventura,181,1,Less than 200,Mood disorders,18308,2
+Behavioral Health,Ventura,181,1,Less than 200,Alcohol-related disorders,12455,3
+Behavioral Health,Ventura,181,1,Less than 200,"Intentional self-harm, suicidal ideation, and suicide attempts",5121,4
+Behavioral Health,Ventura,181,1,Less than 200,Schizophrenia and other psychotic disorders,4322,5
+Behavioral Health,Ventura,181,1,Less than 200,Stimulant-related disorders,4317,6
+Behavioral Health,Ventura,181,1,Less than 200,Opioid-related disorders,4119,7
+Behavioral Health,Ventura,181,1,Less than 200,Cannabis-related disorders,3847,8
+Behavioral Health,Ventura,181,1,Less than 200,Adjustment disorders,2445,9
+Behavioral Health,Ventura,181,1,Less than 200,Miscellaneous substance-related disorders,1830,10
+Behavioral Health,Yolo,132,1,Less than 200,Anxiety disorders,3357,1
+Behavioral Health,Yolo,132,1,Less than 200,Mood disorders,2636,2
+Behavioral Health,Yolo,132,1,Less than 200,Alcohol-related disorders,1818,3
+Behavioral Health,Yolo,132,1,Less than 200,"Intentional self-harm, suicidal ideation, and suicide attempts",1362,4
+Behavioral Health,Yolo,132,1,Less than 200,Schizophrenia and other psychotic disorders,1343,5
+Behavioral Health,Yolo,132,1,Less than 200,Stimulant-related disorders,1139,6
+Behavioral Health,Yolo,132,1,Less than 200,Cannabis-related disorders,815,7
+Behavioral Health,Yolo,132,1,Less than 200,Opioid-related disorders,557,8
+Behavioral Health,Yolo,132,1,Less than 200,Adjustment disorders,491,9
+Behavioral Health,Yolo,132,1,Less than 200,Miscellaneous mental health conditions,434,10

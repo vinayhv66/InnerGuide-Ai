@@ -8,6 +8,103 @@ interface ResponseTemplate {
 
 export class ConversationEngine {
   private responseTemplates: ResponseTemplate[] = [
+    // High-specificity templates should appear earlier to capture precise intents
+    {
+      condition: (context) => context.keywords.some(k => ['panic', 'panic attack', 'racing heart', 'chest tightness', 'cant breathe'].includes(k)),
+      responses: [
+        "You're likely experiencing a surge in your body's alarm system. Let's do a 60-second reset: 1) Put one hand on your belly and one on your chest. 2) Breathe in through your nose for 4, hold 4, out through your mouth for 6—repeat 6 times. 3) Name 5 things you can see right now. The wave will pass.",
+        "I'm with you. Try 'box breathing' now: in 4, hold 4, out 4, hold 4 for 1–2 minutes. Place your feet firmly on the floor and press down while naming three colors in the room. Panic feels dangerous but isn't—your system is revving and will settle."
+      ],
+      quickResponses: [
+        "Keep guiding my breathing",
+        "Ground me with 5-4-3-2-1",
+        "Why does panic happen?"
+      ]
+    },
+    {
+      condition: (context) => context.keywords.some(k => ['insomnia', 'cant sleep', 'wide awake', 'sleep paralysis', '3am'].includes(k)),
+      responses: [
+        "If you're awake >20 minutes, get out of bed and do a quiet, low-light activity until sleepiness returns. Keep a fixed wake time, even after poor sleep. Try 4-7-8 breathing in bed and keep the room cool and dark.",
+        "For insomnia: separate 'sleep effort' from 'sleep opportunity'. Use stimulus control—bed only for sleep and intimacy, rise if not sleepy. Start a gentle wind-down 60 minutes before bed; avoid bright screens and heavy meals."
+      ],
+      quickResponses: [
+        "Teach me stimulus control",
+        "Plan a wind-down routine",
+        "Set a fixed wake time"
+      ]
+    },
+    {
+      condition: (context) => context.keywords.some(k => ['flashbacks', 'intrusive memories', 'triggered'].includes(k)),
+      responses: [
+        "Flashbacks feel like the past is happening now. Let's anchor: look around and name 5 safe objects; press your feet into the floor; place a cool cloth on your neck; find one comforting scent. Tell yourself: 'This is a memory. I am in the present.'",
+        "When triggered, engage your senses: hold ice or a cold can, name 3 textures you can feel, notice 3 sounds. Slow your breathing and orient to the room (date, location, who is with you). You're safe right now."
+      ],
+      quickResponses: [
+        "Guide a grounding drill",
+        "Create a trigger plan",
+        "Find trauma resources"
+      ]
+    },
+    {
+      condition: (context) => context.keywords.some(k => ['checking', 'washing', 'rituals'].includes(k)) && context.keywords.some(k => this.keywords.ocd?.includes(k) || ['ocd'].includes(k)),
+      responses: [
+        "When the urge to ritualize hits, label it: 'That's an OCD urge.' Try a short delay—3 minutes—without doing the ritual while breathing slowly. Notice the urge rise, peak, and fall like a wave. This is ERP in action.",
+        "Compulsions reduce anxiety briefly but strengthen the cycle. Practice 'response prevention' in tiny steps: reduce time spent on a ritual or skip one step today. Track wins and discomfort—they are signs of progress."
+      ],
+      quickResponses: [
+        "Plan a 3-minute delay",
+        "How to track ERP steps",
+        "Reduce a ritual safely"
+      ]
+    },
+    {
+      condition: (context) => context.keywords.some(k => ['migraine', 'headache'].includes(k)),
+      responses: [
+        "I'm not a clinician, but for headaches/migraines: hydrate, dim lights, rest in a quiet room, and follow any clinician-advised medications. Seek urgent care for severe or unusual headaches, or neurological symptoms.",
+        "Track possible triggers (sleep loss, certain foods, stress). A symptom diary helps clinicians tailor care. If headaches are frequent or severe, medical evaluation is important."
+      ],
+      quickResponses: [
+        "List common triggers",
+        "When to seek care",
+        "Start a symptom diary"
+      ]
+    },
+    {
+      condition: (context) => context.keywords.some(k => ['cold', 'flu', 'fever', 'sore throat', 'cough', 'congestion', 'runny nose'].includes(k)),
+      responses: [
+        "Rest, fluids, and over-the-counter options per label may help with cold/flu symptoms. Seek medical advice for high fever, chest pain, breathing difficulty, or symptoms lasting more than several days.",
+        "Monitor temperature and hydration. If you have risk factors or worsening symptoms, consult a clinician for personalized guidance."
+      ],
+      quickResponses: [
+        "Self-care checklist",
+        "When to call a doctor",
+        "Track symptoms"
+      ]
+    },
+    {
+      condition: (context) => context.keywords.some(k => ['allergies', 'itching', 'hives', 'sneezing'].includes(k)),
+      responses: [
+        "Allergy flares can improve with avoidance of triggers and appropriate over-the-counter options per label. Seek urgent care for breathing issues, swelling of lips/tongue, or signs of anaphylaxis.",
+        "Track exposures (pollens, pets, foods) and discuss with a clinician if symptoms persist or worsen."
+      ],
+      quickResponses: [
+        "Common triggers",
+        "When it's urgent",
+        "Track exposures"
+      ]
+    },
+    {
+      condition: (context) => context.keywords.some(k => ['asthma', 'wheezing', 'shortness of breath'].includes(k)),
+      responses: [
+        "If you're having trouble breathing, follow your asthma action plan or seek urgent care. Avoid triggers, sit upright, and use prescribed rescue inhalers as directed by your clinician.",
+        "Track peak flows and symptoms if advised. For frequent symptoms, consult your clinician—treatment adjustments can help prevent flares."
+      ],
+      quickResponses: [
+        "Asthma action basics",
+        "Recognize flare signs",
+        "When to seek urgent care"
+      ]
+    },
     {
       condition: (context) => context.keywords.includes('overwhelmed') || context.keywords.includes('stressed'),
       responses: [
@@ -22,11 +119,156 @@ export class ConversationEngine {
       ]
     },
     {
+      condition: (context) => context.topic === 'ocd' || context.keywords.some(k => this.keywords.ocd?.includes(k)),
+      responses: [
+        "What you're describing sounds like it may involve obsessions and compulsions—repetitive intrusive thoughts and rituals meant to reduce anxiety. OCD is a common, treatable condition. A helpful approach is to notice the urge, name it as an OCD urge, and delay the ritual for a short window while practicing slow breathing. Exposure and Response Prevention (ERP) therapy is especially effective.",
+        "Intrusive thoughts can feel alarming, but they do not define who you are. Many people with OCD experience distressing thoughts precisely because they care deeply about their values. Try labeling thoughts as 'obsessions' and gently redirecting attention without engaging in the ritual. Consider talking with a clinician trained in ERP."
+      ],
+      quickResponses: [
+        "Help me delay a ritual",
+        "How does ERP work?",
+        "These thoughts scare me"
+      ]
+    },
+    {
+      condition: (context) => context.topic === 'schizophrenia' || context.keywords.some(k => this.keywords.schizophrenia?.includes(k) || this.keywords.psychotic?.includes(k)),
+      responses: [
+        "Experiences like hearing voices or having fixed unusual beliefs can be symptoms of psychosis or schizophrenia spectrum conditions. These are medical, treatable issues. If you're currently unsafe or extremely distressed, please seek urgent care. Otherwise, consider evaluation with a psychiatrist—medication and psychosocial supports can help significantly.",
+        "You're not alone facing these experiences. Grounding strategies (cold water, focusing on present sensory details) and consistent routines can help. Professional care—often medication plus therapy—can reduce symptoms and improve quality of life."
+      ],
+      quickResponses: [
+        "Ground me right now",
+        "How to seek evaluation",
+        "What helps with voices?"
+      ]
+    },
+    {
+      condition: (context) => context.topic === 'bpd' || context.keywords.some(k => this.keywords.bpd?.includes(k)),
+      responses: [
+        "Intense emotions, relationship swings, and fear of abandonment can be part of borderline personality patterns. Dialectical Behavior Therapy (DBT) skills—distress tolerance, emotion regulation, and interpersonal effectiveness—are evidence-based and highly effective.",
+        "You're doing the best you can with very strong feelings. Try a DBT 'TIPP' skill: Temperature (cold water on face), Intense exercise (short burst), Paced breathing, and Paired muscle relaxation to ride out emotional waves."
+      ],
+      quickResponses: [
+        "Teach me a DBT skill",
+        "How do I manage urges?",
+        "What is DBT?"
+      ]
+    },
+    {
+      condition: (context) => context.topic === 'asd' || context.keywords.some(k => this.keywords.asd?.includes(k)),
+      responses: [
+        "Autism can involve differences in social communication and sensory processing. Reducing sensory load, using clear routines, and advocating for preferred communication styles can help. You deserve environments that fit your needs.",
+        "Sensory overwhelm is real. Consider noise-reduction tools, scheduled downtime, and scripting for challenging interactions. Support from neurodiversity-affirming professionals can be valuable."
+      ],
+      quickResponses: [
+        "Help with sensory overload",
+        "Create a routine",
+        "Explain needs to others"
+      ]
+    },
+    {
+      condition: (context) => context.topic === 'sad' || context.keywords.some(k => this.keywords.sad?.includes(k)),
+      responses: [
+        "Seasonal shifts can lower mood and energy. Bright light therapy (10,000 lux in the morning), consistent sleep, outdoor time, and activity scheduling often help with Seasonal Affective Disorder.",
+        "If winters hit hard emotionally, consider morning light exposure, vitamin D discussion with your clinician, and planning energizing activities. Professional care can help if symptoms are significant."
+      ],
+      quickResponses: [
+        "How to use light therapy",
+        "Plan winter supports",
+        "Discuss vitamin D"
+      ]
+    },
+    {
+      condition: (context) => context.topic === 'dissociative' || context.keywords.some(k => this.keywords.dissociative?.includes(k) || this.keywords.did?.includes(k)),
+      responses: [
+        "Feeling detached from self or surroundings (depersonalization/derealization) can be dissociation—often linked with stress or trauma. Ground gently: name 5 things you see, press your feet into the floor, hold a comforting object.",
+        "If you experience identity shifts or time gaps, consider trauma-informed therapy. Safety, stabilization, and gentle grounding are priorities before processing trauma."
+      ],
+      quickResponses: [
+        "Guide a grounding exercise",
+        "Find trauma-informed care",
+        "Stabilization tips"
+      ]
+    },
+    {
+      condition: (context) => context.topic === 'substance' || context.keywords.some(k => this.keywords.substance?.includes(k)),
+      responses: [
+        "Substance use struggles are common and treatable. Urge-surfing (observe, breathe, allow the urge to peak and pass) and building alternate coping plans help. Consider support groups or addiction-specialist care.",
+        "Relapse risk rises with stress and isolation. Create a crisis plan, remove triggers if possible, and reach out to trusted supports. Medication-assisted treatment can be life-changing for some."
+      ],
+      quickResponses: [
+        "Urge-surfing steps",
+        "Make a safety plan",
+        "Find local support"
+      ]
+    },
+    {
+      condition: (context) => context.topic === 'somatic' || context.keywords.some(k => this.keywords.somatic?.includes(k)),
+      responses: [
+        "Worry about physical symptoms can amplify distress. Collaborative medical evaluation plus mind–body strategies (paced breathing, gentle movement, attention shifting) can reduce symptom focus and improve functioning.",
+        "It helps to validate symptoms while reducing catastrophic interpretations. Track patterns, practice relaxation, and seek integrated care if available."
+      ],
+      quickResponses: [
+        "Mind–body techniques",
+        "Track symptoms wisely",
+        "Reduce health anxiety"
+      ]
+    },
+    {
+      condition: (context) => context.topic === 'ied' || context.keywords.some(k => this.keywords.ied?.includes(k)),
+      responses: [
+        "Sudden intense anger outbursts can be addressed with trigger mapping, early warning sign spotting, and body-based calming (cold water, paced breathing, brief time-outs). Professional evaluation can clarify IED and treatments.",
+        "Practice a rapid cool-down plan: leave the situation safely, immerse hands in cold water, 4-7-8 breathing, return when calm."
+      ],
+      quickResponses: [
+        "Build a cool-down plan",
+        "Spot early warning signs",
+        "Anger management options"
+      ]
+    },
+    {
+      condition: (context) => context.topic === 'pmdd' || context.keywords.some(k => this.keywords.pmdd?.includes(k)),
+      responses: [
+        "PMDD involves severe cyclical mood and physical symptoms premenstrually. Symptom tracking, sleep regularity, exercise, and medical consultation (including SSRIs or hormonal options) can help.",
+        "Consider a cycle-aware plan: schedule supports during high-symptom days, emphasize rest and nourishment, and discuss options with a clinician."
+      ],
+      quickResponses: [
+        "Track symptoms by cycle",
+        "Lifestyle supports",
+        "Discuss treatment options"
+      ]
+    },
+    {
+      condition: (context) => context.topic === 'sleepDisorders' || context.keywords.some(k => this.keywords.sleepDisorders?.includes(k)),
+      responses: [
+        "Persistent insomnia or narcolepsy symptoms warrant evaluation. For insomnia, CBT-I strategies—consistent wake time, stimulus control, and sleep restriction—are highly effective.",
+        "If daytime sleep attacks or cataplexy occur, please seek sleep-medicine evaluation. Good sleep hygiene helps, but medical care may be needed."
+      ],
+      quickResponses: [
+        "CBT-I basics",
+        "Set a wake time",
+        "Find a sleep clinic"
+      ]
+    },
+    {
+      condition: (context) => context.topic === 'generalHealth' || context.keywords.some(k => this.keywords.generalHealth?.includes(k)),
+      responses: [
+        "I’m not a medical professional, but symptoms like fever, severe headache, breathing issues (e.g., asthma), or persistent flu-like illness may require medical advice. Rest, hydration, and following your clinician’s guidance are important.",
+        "For allergies or colds, basic care like fluids, rest, and over-the-counter options per label can help; consult a clinician for personalized guidance—especially with asthma or severe symptoms."
+      ],
+      quickResponses: [
+        "When to seek care",
+        "Self-care basics",
+        "Track symptoms"
+      ]
+    },
+    {
       condition: (context) => context.keywords.includes('anxious') || context.keywords.includes('worry') || context.keywords.includes('worried'),
       responses: [
         "I want you to know that anxiety, while deeply uncomfortable, is actually your mind's way of trying to keep you safe - even when there's no real danger present. What you're experiencing is your body's ancient alarm system activating, flooding your system with stress hormones that were designed to help our ancestors escape physical threats.\n\nAnxiety often develops when our minds get caught in 'what if' spirals - imagining all the things that could go wrong, even when most of these scenarios are unlikely to happen. This is called 'catastrophic thinking,' and it's incredibly common. Your brain does this because it believes that by thinking through every possible problem, it can prevent bad things from happening.\n\nHere's what can help right now: Try the '5-4-3-2-1' grounding technique - identify 5 things you can see, 4 you can touch, 3 you can hear, 2 you can smell, and 1 you can taste. This brings you back to the present moment where you are actually safe. Also, remember that anxiety lies to us - it tells us everything is urgent and dangerous when most things aren't. You are stronger than your anxiety, and these feelings will pass.",
         "The worry you're carrying feels so real and important right now, and I understand why your mind keeps circling back to these concerns. Anxiety often stems from our need for certainty and control in an uncertain world. When we can't predict or control outcomes, our minds try to fill in the gaps by imagining worst-case scenarios.\n\nThis pattern often develops because, at some point, worrying helped protect you or someone you care about. Your mind learned that staying alert to potential problems was important for survival or success. But now, this protective mechanism might be working overtime, creating stress about things that are largely outside your control.\n\nLet's try to distinguish between 'productive worry' and 'unproductive worry.' Productive worry leads to problem-solving and action. Unproductive worry just creates suffering without solutions. Try asking yourself: 'Is this something I can actually influence right now?' If yes, what's one small step you could take? If no, try this mantra: 'I notice I'm worrying about something I can't control, and that's okay. I'm safe right now.' Remember, uncertainty doesn't equal danger.",
-        "What you're experiencing with anxiety is so much more common than people talk about, and the fact that you're reaching out shows incredible courage and self-awareness. Anxiety disorders affect millions of people, and the feelings you're having - that racing heart, the tight chest, the mind that won't stop spinning - these are all normal responses to an overactive fear center in your brain.\n\nAnxiety often intensifies when we try to fight it or push it away. It's like trying to hold a beach ball underwater - the more force you use, the more violently it pops back up. Instead, try to observe your anxiety with curiosity rather than judgment. Notice where you feel it in your body, acknowledge it's there, and remind yourself that feelings are temporary visitors, not permanent residents.\n\nSome practical strategies that many find helpful: Practice 'box breathing' - inhale for 4 counts, hold for 4, exhale for 4, hold for 4. This activates your parasympathetic nervous system. Also, try challenging anxious thoughts by asking: 'What would I tell my best friend if they had this worry?' Often, we're much kinder and more rational when advising others. Remember, you've survived 100% of your difficult days so far, and this too shall pass."
+        "What you're experiencing with anxiety is so much more common than people talk about, and the fact that you're reaching out shows incredible courage and self-awareness. Anxiety disorders affect millions of people, and the feelings you're having - that racing heart, the tight chest, the mind that won't stop spinning - these are all normal responses to an overactive fear center in your brain.\n\nAnxiety often intensifies when we try to fight it or push it away. It's like trying to hold a beach ball underwater - the more force you use, the more violently it pops back up. Instead, try to observe your anxiety with curiosity rather than judgment. Notice where you feel it in your body, acknowledge it's there, and remind yourself that feelings are temporary visitors, not permanent residents.\n\nSome practical strategies that many find helpful: Practice 'box breathing' - inhale for 4 counts, hold for 4, exhale for 4, hold for 4. This activates your parasympathetic nervous system. Also, try challenging anxious thoughts by asking: 'What would I tell my best friend if they had this worry?' Often, we're much kinder and more rational when advising others. Remember, you've survived 100% of your difficult days so far, and this too shall pass.",
+        "A quick thought reset: write down the worry, list evidence for and against it, then write a balanced alternative thought. Limit dedicated 'worry time' to 10 minutes once per day—capture worries outside that window and revisit only then.",
       ],
       quickResponses: [
         "Teach me the grounding technique you mentioned",
@@ -39,7 +281,8 @@ export class ConversationEngine {
       responses: [
         "I can sense the heaviness you're carrying, and I want you to know that reaching out takes real strength, even when everything feels difficult. Sadness and depression aren't signs of weakness - they're your mind and body's way of signaling that something needs attention and care, like physical pain alerts us to injury.\n\nDepression often happens when we've been overwhelmed for too long, experienced significant losses, or when brain chemistry shifts due to stress, genetics, or life circumstances. It's like your emotional immune system has become depleted from fighting too hard for too long. The exhaustion, the feeling that nothing matters, the difficulty finding joy in things you used to love - these are all real symptoms of a real condition, not character flaws.\n\nHere's what I want you to remember: small steps count enormously when you're depressed. Getting out of bed is an achievement. Taking a shower is self-care. Eating a meal is nourishing yourself. Try the 'one small thing' approach - just commit to one tiny positive action each day, like stepping outside for two minutes or texting one person. Also, depression lies to us by saying we're alone and that nothing will get better. But you are not alone, and with support and time, these feelings can and do change.",
         "The sadness you're experiencing feels so overwhelming right now, and I want to acknowledge how difficult it is to carry this weight. Sometimes sadness comes from specific losses or disappointments, but other times it settles in without an obvious cause, which can feel confusing and frustrating. Both types are equally valid and deserving of care.\n\nWhen we're deeply sad, our brains actually change - the areas responsible for motivation and pleasure become less active, which is why everything can feel pointless or exhausting. This isn't your fault; it's a physiological response to emotional distress. Your brain is actually trying to conserve energy and protect you by slowing things down, but this can create a cycle where inactivity leads to more sadness.\n\nGentle ways to start breaking this cycle: Try 'opposite action' - when sadness tells you to isolate, reach out to one person. When it says to stay in bed, try sitting by a window for five minutes. Practice 'radical acceptance' by saying 'I notice I'm feeling very sad right now, and that's okay. Feelings are information, not instructions.' Consider creating a 'comfort kit' - gather items that bring tiny moments of comfort like soft textures, soothing scents, or photos of people who care about you. Remember, healing isn't linear, and you don't have to be grateful or positive - you just have to be here, and that's enough.",
-        "Your willingness to share these feelings shows such courage, especially when depression or sadness makes us believe we're burdens or that no one could understand. But I do understand, and what you're feeling is shared by so many people who are also struggling in silence. Depression often comes with shame, making us feel like we should be able to 'snap out of it' or be stronger, but this thinking only adds suffering to an already difficult experience.\n\nSadness and depression can stem from many sources: unresolved grief, chronic stress, hormonal changes, seasonal patterns, genetics, trauma, or major life transitions. Sometimes it's a combination of factors, and sometimes there's no clear 'reason' at all. Your brain chemistry, life experiences, and current stressors all interact in complex ways that can lead to these difficult feelings.\n\nWhat helps many people: Create structure without pressure - maybe that's making your bed or having coffee at the same time each day. Practice 'self-compassion' by speaking to yourself as you would to a dear friend going through the same struggle. Consider 'behavioral activation' - engaging in small activities that used to bring you some pleasure, even if they don't feel appealing now. Most importantly, please don't try to handle this completely alone. Professional support can make an enormous difference, whether that's therapy, support groups, or medical care. You deserve help, and you deserve to feel better."
+        "Your willingness to share these feelings shows such courage, especially when depression or sadness makes us believe we're burdens or that no one could understand. But I do understand, and what you're feeling is shared by so many people who are also struggling in silence. Depression often comes with shame, making us feel like we should be able to 'snap out of it' or be stronger, but this thinking only adds suffering to an already difficult experience.\n\nSadness and depression can stem from many sources: unresolved grief, chronic stress, hormonal changes, seasonal patterns, genetics, trauma, or major life transitions. Sometimes it's a combination of factors, and sometimes there's no clear 'reason' at all. Your brain chemistry, life experiences, and current stressors all interact in complex ways that can lead to these difficult feelings.\n\nWhat helps many people: Create structure without pressure - maybe that's making your bed or having coffee at the same time each day. Practice 'self-compassion' by speaking to yourself as you would to a dear friend going through the same struggle. Consider 'behavioral activation' - engaging in small activities that used to bring you some pleasure, even if they don't feel appealing now. Most importantly, please don't try to handle this completely alone. Professional support can make an enormous difference, whether that's therapy, support groups, or medical care. You deserve help, and you deserve to feel better.",
+        "Try a 'compassionate letter' to yourself from the perspective of a caring friend. Keep it nearby for tough moments. Schedule one tiny, values-aligned action daily—consistency beats intensity when energy is low.",
       ],
       quickResponses: [
         "Help me understand why I feel this way",
@@ -182,12 +425,26 @@ export class ConversationEngine {
     health: ['sleep', 'eating', 'exercise', 'pain', 'medication', 'therapy', 'counseling'],
     coping: ['help', 'cope', 'manage', 'handle', 'deal', 'support', 'advice', 'technique', 'strategy'],
     // Mental health condition indicators
-    anxiety: ['panic', 'racing heart', 'cant breathe', 'sweating', 'trembling', 'racing thoughts', 'what if', 'catastrophizing'],
-    depression: ['hopeless', 'worthless', 'empty', 'numb', 'crying', 'no energy', 'dont care', 'pointless', 'burden'],
+    anxiety: ['panic', 'racing heart', 'cant breathe', 'sweating', 'trembling', 'racing thoughts', 'what if', 'catastrophizing', 'gad', 'generalized anxiety', 'social anxiety', 'panic disorder', 'agoraphobia', 'phobia', 'specific phobia'],
+    depression: ['hopeless', 'worthless', 'empty', 'numb', 'crying', 'no energy', 'dont care', 'pointless', 'burden', 'sadness', 'sad'],
     adhd: ['cant focus', 'distracted', 'hyperactive', 'impulsive', 'forgetful', 'procrastinate', 'restless', 'scattered'],
     bipolar: ['mood swings', 'manic', 'euphoric', 'grandiose', 'racing thoughts', 'no sleep', 'spending spree', 'reckless'],
     ptsd: ['flashbacks', 'nightmares', 'triggered', 'avoidance', 'hypervigilant', 'trauma', 'dissociation', 'intrusive'],
-    eatingDisorder: ['binge', 'purge', 'restricting', 'calories', 'weight', 'body image', 'guilt eating', 'food obsession']
+    eatingDisorder: ['binge', 'purge', 'restricting', 'calories', 'weight', 'body image', 'guilt eating', 'food obsession', 'anorexia', 'anorexia nervosa', 'bulimia', 'bulimia nervosa'],
+    ocd: ['obsessions', 'compulsions', 'rituals', 'checking', 'contamination', 'intrusive thoughts', 'ocd'],
+    schizophrenia: ['hallucinations', 'delusions', 'voices', 'psychosis', 'schizophrenia', 'paranoia'],
+    psychotic: ['psychotic', 'psychosis', 'delusional', 'hallucinating'],
+    bpd: ['borderline personality', 'bpd', 'fear of abandonment', 'unstable relationships', 'self-harm urges'],
+    asd: ['autism', 'autistic', 'asd', 'sensory overload', 'social communication'],
+    sad: ['seasonal affective disorder', 'seasonal depression', 'winter blues', 'sad disorder'],
+    dissociative: ['dissociative', 'depersonalization', 'derealization'],
+    did: ['dissociative identity disorder', 'multiple personalities', 'alters'],
+    substance: ['addiction', 'substance use', 'alcohol', 'drugs', 'relapse', 'craving', 'sobriety'],
+    somatic: ['somatic symptom', 'health anxiety', 'physical symptoms', 'medically unexplained'],
+    ied: ['intermittent explosive disorder', 'anger outbursts', 'rage'],
+    pmdd: ['premenstrual dysphoric', 'pmdd', 'severe pms'],
+    sleepDisorders: ['sleep disorder', 'insomnia', 'narcolepsy', 'hypersomnia'],
+    generalHealth: ['fever', 'cold', 'flu', 'headache', 'asthma', 'allergies']
   };
 
   analyzeMessage(message: string): ConversationContext {
@@ -218,10 +475,22 @@ export class ConversationEngine {
     if (foundKeywords.some(k => this.keywords.jobSearch.includes(k))) topic = 'jobSearch';
     else if (foundKeywords.some(k => this.keywords.anxiety.includes(k))) topic = 'anxiety';
     else if (foundKeywords.some(k => this.keywords.depression.includes(k))) topic = 'depression';
+    else if (foundKeywords.some(k => this.keywords.ocd?.includes(k))) topic = 'ocd';
+    else if (foundKeywords.some(k => this.keywords.schizophrenia?.includes(k) || this.keywords.psychotic?.includes(k))) topic = 'schizophrenia';
+    else if (foundKeywords.some(k => this.keywords.bpd?.includes(k))) topic = 'bpd';
+    else if (foundKeywords.some(k => this.keywords.asd?.includes(k))) topic = 'asd';
+    else if (foundKeywords.some(k => this.keywords.sad?.includes(k))) topic = 'sad';
+    else if (foundKeywords.some(k => this.keywords.dissociative?.includes(k) || this.keywords.did?.includes(k))) topic = 'dissociative';
+    else if (foundKeywords.some(k => this.keywords.substance?.includes(k))) topic = 'substance';
+    else if (foundKeywords.some(k => this.keywords.somatic?.includes(k))) topic = 'somatic';
+    else if (foundKeywords.some(k => this.keywords.ied?.includes(k))) topic = 'ied';
+    else if (foundKeywords.some(k => this.keywords.pmdd?.includes(k))) topic = 'pmdd';
+    else if (foundKeywords.some(k => this.keywords.sleepDisorders?.includes(k))) topic = 'sleepDisorders';
     else if (foundKeywords.some(k => this.keywords.adhd.includes(k))) topic = 'adhd';
     else if (foundKeywords.some(k => this.keywords.bipolar.includes(k))) topic = 'bipolar';
     else if (foundKeywords.some(k => this.keywords.ptsd.includes(k))) topic = 'ptsd';
     else if (foundKeywords.some(k => this.keywords.eatingDisorder.includes(k))) topic = 'eatingDisorder';
+    else if (foundKeywords.some(k => this.keywords.generalHealth?.includes(k))) topic = 'generalHealth';
     else if (foundKeywords.some(k => this.keywords.work.includes(k))) topic = 'work';
     else if (foundKeywords.some(k => this.keywords.relationships.includes(k))) topic = 'relationships';
     else if (foundKeywords.some(k => this.keywords.health.includes(k))) topic = 'health';

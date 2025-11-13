@@ -1,0 +1,520 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindSpace - Mental Health Support Chatbot</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    'sage': {
+                        50: '#f5f8f5',
+                        100: '#e8f1e8',
+                        200: '#d4e5d4',
+                        300: '#b3d1b3',
+                        400: '#8fbc8f',
+                        500: '#6ea56e',
+                        600: '#5a8f5a'
+                    },
+                    'lavender': {
+                        50: '#faf9fc',
+                        100: '#f3f1f7',
+                        200: '#e8e4ee',
+                        300: '#d7cfe1',
+                        400: '#b8a9c9',
+                        500: '#9d8bb3'
+                    },
+                    'coral': {
+                        50: '#fef8f3',
+                        100: '#fdeee4',
+                        200: '#fbdbc9',
+                        300: '#f7bfa3',
+                        400: '#f4a460',
+                        500: '#e6944d'
+                    },
+                    'cream': '#fefdf8',
+                    'charcoal': '#2f3e46'
+                }
+            },
+            fontFamily: {
+                'sans': ['Inter', 'system-ui', 'sans-serif']
+            }
+        }
+    };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-cream font-sans text-charcoal">
+
+<!-- @COMPONENT: Header -->
+<header class="bg-white/80 backdrop-blur-md border-b border-sage-200 sticky top-0 z-50">
+    <div class="max-w-4xl mx-auto px-4 py-4">
+        <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-gradient-to-br from-sage-400 to-sage-500 rounded-full flex items-center justify-center">
+                    <i class="fas fa-leaf text-white text-lg"></i>
+                </div>
+                <div>
+                    <h1 class="text-xl font-semibold text-charcoal">MindSpace</h1>
+                    <p class="text-sm text-sage-600">Your mental wellness companion</p>
+                </div>
+            </div>
+            <button class="p-2 hover:bg-sage-50 rounded-full transition-colors">
+                <i class="fas fa-bars text-sage-600"></i>
+            </button>
+        </div>
+    </div>
+</header>
+<!-- @END_COMPONENT: Header -->
+
+<!-- @COMPONENT: MainContainer -->
+<main class="max-w-4xl mx-auto px-4 py-6">
+    
+    <!-- Welcome Section -->
+    <!-- @COMPONENT: WelcomeSection -->
+    <section class="mb-8">
+        <div class="bg-gradient-to-r from-sage-50 to-lavender-50 rounded-2xl p-6 border border-sage-100">
+            <div class="text-center mb-6">
+                <h2 class="text-2xl font-semibold text-charcoal mb-2">Welcome to Your Safe Space</h2>
+                <p class="text-sage-600 max-w-2xl mx-auto leading-relaxed">
+                    I'm here to listen, support, and help you navigate your feelings. Take a moment to breathe and know that you're not alone.
+                </p>
+            </div>
+            
+            <!-- Quick Mood Check -->
+            <div class="bg-white rounded-xl p-4 shadow-sm">
+                <h3 class="font-medium mb-3 text-center">How are you feeling right now?</h3>
+                <div class="grid grid-cols-5 gap-3">
+                    <!-- @MAP: moods.map(mood => ( -->
+                    <button class="mood-btn flex flex-col items-center p-3 rounded-xl hover:bg-sage-50 transition-all duration-200" data-mood="great">
+                        <span class="text-2xl mb-1">😊</span>
+                        <span class="text-xs text-sage-600">Great</span>
+                    </button>
+                    <button class="mood-btn flex flex-col items-center p-3 rounded-xl hover:bg-sage-50 transition-all duration-200" data-mood="good">
+                        <span class="text-2xl mb-1">🙂</span>
+                        <span class="text-xs text-sage-600">Good</span>
+                    </button>
+                    <button class="mood-btn flex flex-col items-center p-3 rounded-xl hover:bg-sage-50 transition-all duration-200" data-mood="okay">
+                        <span class="text-2xl mb-1">😐</span>
+                        <span class="text-xs text-sage-600">Okay</span>
+                    </button>
+                    <button class="mood-btn flex flex-col items-center p-3 rounded-xl hover:bg-sage-50 transition-all duration-200" data-mood="low">
+                        <span class="text-2xl mb-1">😔</span>
+                        <span class="text-xs text-sage-600">Low</span>
+                    </button>
+                    <button class="mood-btn flex flex-col items-center p-3 rounded-xl hover:bg-sage-50 transition-all duration-200" data-mood="struggling">
+                        <span class="text-2xl mb-1">😰</span>
+                        <span class="text-xs text-sage-600">Struggling</span>
+                    </button>
+                    <!-- @END_MAP )) -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: WelcomeSection -->
+
+    <div class="grid lg:grid-cols-3 gap-6">
+        
+        <!-- Chat Interface -->
+        <!-- @COMPONENT: ChatInterface -->
+        <div class="lg:col-span-2">
+            <div class="bg-white rounded-2xl shadow-sm border border-sage-100 overflow-hidden">
+                <div class="bg-gradient-to-r from-sage-400 to-sage-500 p-4 text-white">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                            <i class="fas fa-heart text-sm"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-medium">Mental Health Assistant</h3>
+                            <p class="text-sage-100 text-sm">Always here to listen</p>
+                        </div>
+                        <div class="ml-auto">
+                            <span class="inline-flex items-center px-2 py-1 bg-white/20 rounded-full text-xs">
+                                <span class="w-2 h-2 bg-green-300 rounded-full mr-2"></span>
+                                Online
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Chat Messages -->
+                <div class="h-96 overflow-y-auto p-4 space-y-4" id="chatMessages">
+                    <!-- Bot Message -->
+                    <div class="flex items-start space-x-3">
+                        <div class="w-8 h-8 bg-sage-400 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-leaf text-white text-xs"></i>
+                        </div>
+                        <div class="flex-1">
+                            <div class="bg-sage-50 rounded-2xl rounded-tl-md p-4 max-w-xs">
+                                <p class="text-charcoal leading-relaxed">Hello! I'm here to support you today. Would you like to share what's on your mind, or would you prefer to start with a guided breathing exercise?</p>
+                            </div>
+                            <span class="text-xs text-sage-500 mt-1 block">Just now</span>
+                        </div>
+                    </div>
+                    
+                    <!-- User Message -->
+                    <div class="flex items-start space-x-3 justify-end">
+                        <div class="flex-1 text-right">
+                            <div class="bg-lavender-400 text-white rounded-2xl rounded-tr-md p-4 max-w-xs ml-auto">
+                                <p class="leading-relaxed">I've been feeling overwhelmed with work lately. I can't seem to focus and I'm constantly worried.</p>
+                            </div>
+                            <span class="text-xs text-sage-500 mt-1 block">2 minutes ago</span>
+                        </div>
+                        <div class="w-8 h-8 bg-lavender-400 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-user text-white text-xs"></i>
+                        </div>
+                    </div>
+                    
+                    <!-- Bot Response -->
+                    <div class="flex items-start space-x-3">
+                        <div class="w-8 h-8 bg-sage-400 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-leaf text-white text-xs"></i>
+                        </div>
+                        <div class="flex-1">
+                            <div class="bg-sage-50 rounded-2xl rounded-tl-md p-4 max-w-sm">
+                                <p class="text-charcoal leading-relaxed mb-3">I hear you, and what you're feeling is completely valid. Work stress can be overwhelming, and it's normal to feel this way.</p>
+                                <p class="text-charcoal leading-relaxed mb-3">Let's try to break this down together. When you say you can't focus, what specific situations trigger this feeling the most?</p>
+                                
+                                <!-- Quick Response Options -->
+                                <div class="mt-3 space-y-2">
+                                    <button class="w-full text-left p-2 bg-white rounded-lg hover:bg-sage-100 transition-colors text-sm border border-sage-200">
+                                        🎯 "During important meetings or presentations"
+                                    </button>
+                                    <button class="w-full text-left p-2 bg-white rounded-lg hover:bg-sage-100 transition-colors text-sm border border-sage-200">
+                                        📚 "When I have multiple deadlines"
+                                    </button>
+                                    <button class="w-full text-left p-2 bg-white rounded-lg hover:bg-sage-100 transition-colors text-sm border border-sage-200">
+                                        💭 "I prefer to explain in my own words"
+                                    </button>
+                                </div>
+                            </div>
+                            <span class="text-xs text-sage-500 mt-1 block">Just now</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Chat Input -->
+                <div class="border-t border-sage-100 p-4">
+                    <div class="flex space-x-3">
+                        <button class="p-2 text-sage-500 hover:text-sage-600 hover:bg-sage-50 rounded-full transition-colors">
+                            <i class="fas fa-smile"></i>
+                        </button>
+                        <div class="flex-1 relative">
+                            <input type="text" placeholder="Share your thoughts..." 
+                                   class="w-full px-4 py-3 bg-sage-50 border border-sage-200 rounded-2xl focus:outline-none focus:ring-2 focus:ring-sage-300 focus:border-transparent transition-all">
+                            <button class="absolute right-2 top-1/2 transform -translate-y-1/2 p-2 text-sage-500 hover:text-sage-600 transition-colors">
+                                <i class="fas fa-microphone"></i>
+                            </button>
+                        </div>
+                        <button class="px-6 py-3 bg-sage-400 text-white rounded-2xl hover:bg-sage-500 transition-colors font-medium">
+                            Send
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- @END_COMPONENT: ChatInterface -->
+        
+        <!-- Sidebar -->
+        <!-- @COMPONENT: Sidebar -->
+        <div class="space-y-6">
+            
+            <!-- Breathing Exercise -->
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-sage-100">
+                <div class="text-center mb-4">
+                    <div class="w-16 h-16 bg-gradient-to-br from-coral-400 to-coral-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <i class="fas fa-wind text-white text-xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-charcoal mb-2">Guided Breathing</h3>
+                    <p class="text-sm text-sage-600">Take a moment to center yourself</p>
+                </div>
+                
+                <!-- Breathing Circle -->
+                <div class="relative flex items-center justify-center mb-4">
+                    <div class="w-32 h-32 border-4 border-sage-200 rounded-full flex items-center justify-center">
+                        <div class="w-20 h-20 bg-gradient-to-br from-sage-400 to-sage-500 rounded-full animate-pulse flex items-center justify-center">
+                            <span class="text-white font-medium text-sm">Breathe</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center space-y-3">
+                    <button class="w-full py-3 bg-coral-400 text-white rounded-xl hover:bg-coral-500 transition-colors font-medium">
+                        Start Exercise (4-7-8)
+                    </button>
+                    <button class="w-full py-2 text-sage-600 hover:text-sage-700 transition-colors text-sm">
+                        More Techniques
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mood Tracking -->
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-sage-100">
+                <h3 class="font-semibold text-charcoal mb-4 flex items-center">
+                    <i class="fas fa-chart-line text-sage-500 mr-2"></i>
+                    Mood Journal
+                </h3>
+                
+                <!-- Weekly Mood Chart -->
+                <div class="mb-4">
+                    <div class="flex justify-between items-end h-20 mb-2">
+                        <!-- @MAP: weekData.map(day => ( -->
+                        <div class="flex flex-col items-center">
+                            <div class="w-4 bg-sage-400 rounded-t" style="height: 60%"></div>
+                            <span class="text-xs text-sage-500 mt-1">M</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="w-4 bg-lavender-400 rounded-t" style="height: 40%"></div>
+                            <span class="text-xs text-sage-500 mt-1">T</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="w-4 bg-coral-400 rounded-t" style="height: 80%"></div>
+                            <span class="text-xs text-sage-500 mt-1">W</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="w-4 bg-sage-400 rounded-t" style="height: 70%"></div>
+                            <span class="text-xs text-sage-500 mt-1">T</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="w-4 bg-lavender-400 rounded-t" style="height: 50%"></div>
+                            <span class="text-xs text-sage-500 mt-1">F</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="w-4 bg-sage-400 rounded-t" style="height: 90%"></div>
+                            <span class="text-xs text-sage-500 mt-1">S</span>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="w-4 bg-coral-400 rounded-t" style="height: 65%"></div>
+                            <span class="text-xs text-sage-500 mt-1">S</span>
+                        </div>
+                        <!-- @END_MAP )) -->
+                    </div>
+                    <p class="text-xs text-sage-500 text-center">This week's mood pattern</p>
+                </div>
+                
+                <button class="w-full py-3 bg-sage-50 text-sage-700 rounded-xl hover:bg-sage-100 transition-colors font-medium border border-sage-200">
+                    Add Today's Entry
+                </button>
+            </div>
+            
+            <!-- Self-Care Activities -->
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-sage-100">
+                <h3 class="font-semibold text-charcoal mb-4 flex items-center">
+                    <i class="fas fa-heart text-coral-500 mr-2"></i>
+                    Self-Care Activities
+                </h3>
+                
+                <div class="space-y-3">
+                    <!-- @MAP: activities.map(activity => ( -->
+                    <div class="flex items-center p-3 bg-sage-50 rounded-xl hover:bg-sage-100 transition-colors cursor-pointer">
+                        <div class="w-8 h-8 bg-coral-400 rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-music text-white text-xs"></i>
+                        </div>
+                        <div class="flex-1">
+                            <p class="font-medium text-sm">Listen to Calming Music</p>
+                            <p class="text-xs text-sage-500">5-10 minutes</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center p-3 bg-lavender-50 rounded-xl hover:bg-lavender-100 transition-colors cursor-pointer">
+                        <div class="w-8 h-8 bg-lavender-400 rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-seedling text-white text-xs"></i>
+                        </div>
+                        <div class="flex-1">
+                            <p class="font-medium text-sm">Mindful Walking</p>
+                            <p class="text-xs text-sage-500">10-15 minutes</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center p-3 bg-coral-50 rounded-xl hover:bg-coral-100 transition-colors cursor-pointer">
+                        <div class="w-8 h-8 bg-sage-400 rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-pen text-white text-xs"></i>
+                        </div>
+                        <div class="flex-1">
+                            <p class="font-medium text-sm">Gratitude Journaling</p>
+                            <p class="text-xs text-sage-500">5 minutes</p>
+                        </div>
+                    </div>
+                    <!-- @END_MAP )) -->
+                </div>
+                
+                <button class="w-full mt-3 py-2 text-sage-600 hover:text-sage-700 transition-colors text-sm">
+                    View All Activities
+                </button>
+            </div>
+            
+        </div>
+        <!-- @END_COMPONENT: Sidebar -->
+        
+    </div>
+    
+    <!-- Crisis Resources & Disclaimers -->
+    <!-- @COMPONENT: CrisisResources -->
+    <section class="mt-8">
+        <div class="bg-gradient-to-r from-coral-50 to-coral-100 rounded-2xl p-6 border border-coral-200">
+            <div class="text-center mb-4">
+                <div class="w-12 h-12 bg-coral-400 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <i class="fas fa-shield-alt text-white"></i>
+                </div>
+                <h3 class="font-semibold text-charcoal mb-2">Important Information</h3>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white rounded-xl p-4">
+                    <h4 class="font-medium text-charcoal mb-3 flex items-center">
+                        <i class="fas fa-exclamation-triangle text-coral-500 mr-2"></i>
+                        Crisis Support
+                    </h4>
+                    <p class="text-sm text-sage-600 mb-3">If you're having thoughts of self-harm or suicide, please reach out immediately:</p>
+                    <div class="space-y-2">
+                        <a href="tel:988" class="flex items-center p-2 bg-coral-50 rounded-lg hover:bg-coral-100 transition-colors">
+                            <i class="fas fa-phone text-coral-500 mr-2"></i>
+                            <span class="text-sm font-medium">988 - Suicide & Crisis Lifeline</span>
+                        </a>
+                        <a href="sms:741741" class="flex items-center p-2 bg-coral-50 rounded-lg hover:bg-coral-100 transition-colors">
+                            <i class="fas fa-comment text-coral-500 mr-2"></i>
+                            <span class="text-sm font-medium">Text HOME to 741741 - Crisis Text Line</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl p-4">
+                    <h4 class="font-medium text-charcoal mb-3 flex items-center">
+                        <i class="fas fa-info-circle text-sage-500 mr-2"></i>
+                        Professional Care
+                    </h4>
+                    <p class="text-sm text-sage-600 mb-3">This chatbot provides supportive conversation but is not a replacement for professional mental health care.</p>
+                    <div class="space-y-2">
+                        <button class="w-full flex items-center p-2 bg-sage-50 rounded-lg hover:bg-sage-100 transition-colors">
+                            <i class="fas fa-user-md text-sage-500 mr-2"></i>
+                            <span class="text-sm font-medium">Find a Therapist</span>
+                        </button>
+                        <button class="w-full flex items-center p-2 bg-sage-50 rounded-lg hover:bg-sage-100 transition-colors">
+                            <i class="fas fa-hospital text-sage-500 mr-2"></i>
+                            <span class="text-sm font-medium">Mental Health Resources</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Privacy Notice -->
+            <div class="mt-4 p-4 bg-white rounded-xl">
+                <h4 class="font-medium text-charcoal mb-2 flex items-center">
+                    <i class="fas fa-lock text-sage-500 mr-2"></i>
+                    Your Privacy is Protected
+                </h4>
+                <p class="text-sm text-sage-600">
+                    All conversations are processed locally on your device. No personal information is shared with external servers. 
+                    Your data remains private and secure.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- @END_COMPONENT: CrisisResources -->
+    
+</main>
+<!-- @END_COMPONENT: MainContainer -->
+
+<!-- Floating Action Button for Quick Help -->
+<div class="fixed bottom-6 right-6 z-40">
+    <button class="w-14 h-14 bg-coral-400 hover:bg-coral-500 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center">
+        <i class="fas fa-question text-lg"></i>
+    </button>
+</div>
+
+<script>
+(function() {
+    // TODO: Implement local NLP model for conversation handling
+    // TODO: Implement mood tracking data persistence
+    // TODO: Implement breathing exercise timer functionality
+    // TODO: Implement self-care activity tracking
+    
+    // Simple interaction handlers for demo purposes
+    document.addEventListener('DOMContentLoaded', function() {
+        // Mood selection handler
+        const moodButtons = document.querySelectorAll('.mood-btn');
+        moodButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const mood = this.dataset.mood;
+                // TODO: Process mood selection and trigger appropriate conversation flow
+                console.log('Selected mood:', mood);
+                
+                // Visual feedback
+                moodButtons.forEach(btn => btn.classList.remove('bg-sage-100', 'scale-105'));
+                this.classList.add('bg-sage-100', 'scale-105');
+            });
+        });
+        
+        // Quick response buttons
+        const quickResponses = document.querySelectorAll('button[class*="w-full text-left"]');
+        quickResponses.forEach(button => {
+            button.addEventListener('click', function() {
+                // TODO: Process quick response and generate appropriate chatbot response
+                console.log('Quick response clicked:', this.textContent.trim());
+            });
+        });
+        
+        // Chat input handling
+        const chatInput = document.querySelector('input[placeholder="Share your thoughts..."]');
+        const sendButton = document.querySelector('button:contains("Send")');
+        
+        if (chatInput) {
+            chatInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    handleSendMessage();
+                }
+            });
+        }
+        
+        // Breathing exercise
+        const breathingButton = document.querySelector('button:contains("Start Exercise")');
+        if (breathingButton) {
+            breathingButton.addEventListener('click', function() {
+                // TODO: Implement 4-7-8 breathing exercise with visual guidance
+                console.log('Starting breathing exercise');
+            });
+        }
+        
+        function handleSendMessage() {
+            // TODO: Implement message sending and local NLP processing
+            const message = chatInput.value.trim();
+            if (message) {
+                console.log('Sending message:', message);
+                chatInput.value = '';
+                // TODO: Add message to chat interface and generate response
+            }
+        }
+    });
+    
+    // Local conversation engine (rule-based)
+    const ConversationEngine = {
+        // TODO: Implement keyword matching and sentiment analysis
+        // TODO: Define conversation trees for different scenarios
+        // TODO: Implement empathetic response generation
+        
+        processMessage: function(message) {
+            // Placeholder for local NLP processing
+            // This would include:
+            // - Keyword extraction
+            // - Sentiment analysis
+            // - Intent recognition
+            // - Response selection from predefined trees
+            return "I understand what you're sharing. Let me help you work through this...";
+        },
+        
+        generateEmpathicResponse: function(sentiment, keywords) {
+            // TODO: Generate contextually appropriate responses
+            // Based on detected sentiment and key topics
+        }
+    };
+    
+})();
+</script>
+
+</body>
+</html>
