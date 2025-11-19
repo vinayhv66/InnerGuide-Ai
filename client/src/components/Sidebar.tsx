@@ -84,19 +84,19 @@ export default function Sidebar() {
       icon: Music,
       name: "Listen to Calming Music",
       duration: "5-10 minutes",
-      color: "coral"
+      color: "lavender"
     },
     {
       icon: Sprout,
       name: "Mindful Walking",
       duration: "10-15 minutes",
-      color: "lavender"
+      color: "sage"
     },
     {
       icon: PenTool,
       name: "Gratitude Journaling",
       duration: "5 minutes",
-      color: "sage"
+      color: "lavender"
     }
   ];
 
@@ -150,9 +150,9 @@ export default function Sidebar() {
   return (
     <div className="space-y-6">
       {/* Breathing Exercise */}
-      <div className="bg-white rounded-2xl p-6 shadow-sm border border-sage-100">
+      <div className="bg-white rounded-2xl p-6 shadow-sm border border-sage-200">
         <div className="text-center mb-4">
-          <div className="w-16 h-16 bg-gradient-to-br from-coral-400 to-coral-500 rounded-full flex items-center justify-center mx-auto mb-3">
+          <div className="w-16 h-16 bg-gradient-to-br from-lavender-400 to-lavender-500 rounded-full flex items-center justify-center mx-auto mb-3 shadow-md">
             <Wind className="text-white" size={24} />
           </div>
           <h3 className="font-semibold text-charcoal mb-2">Guided Breathing</h3>
@@ -176,7 +176,7 @@ export default function Sidebar() {
             className={`w-full py-3 text-white rounded-xl transition-colors font-medium ${
               isBreathing 
                 ? 'bg-red-400 hover:bg-red-500' 
-                : 'bg-coral-400 hover:bg-coral-500'
+                : 'bg-lavender-500 hover:bg-lavender-600'
             }`}
             data-testid="button-breathing-control"
           >
@@ -189,7 +189,7 @@ export default function Sidebar() {
       </div>
       
       {/* Mood Tracking */}
-      <div className="bg-white rounded-2xl p-6 shadow-sm border border-sage-100">
+      <div className="bg-white rounded-2xl p-6 shadow-sm border border-sage-200">
         <h3 className="font-semibold text-charcoal mb-4 flex items-center">
           <TrendingUp className="text-sage-500 mr-2" size={20} />
           Mood Journal
@@ -220,9 +220,9 @@ export default function Sidebar() {
       </div>
       
       {/* Self-Care Activities */}
-      <div className="bg-white rounded-2xl p-6 shadow-sm border border-sage-100">
+      <div className="bg-white rounded-2xl p-6 shadow-sm border border-sage-200">
         <h3 className="font-semibold text-charcoal mb-4 flex items-center">
-          <Heart className="text-coral-500 mr-2" size={20} />
+          <Heart className="text-lavender-500 mr-2" size={20} />
           Self-Care Activities
         </h3>
         

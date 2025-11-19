@@ -51,7 +51,7 @@ export default function MoodEntryDialog({ isOpen, onClose, onSave }: MoodEntryDi
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
           <DialogTitle className="flex items-center text-charcoal">
-            <Heart className="text-coral-500 mr-2" size={20} />
+            <Heart className="text-lavender-500 mr-2" size={20} />
             How are you feeling today?
           </DialogTitle>
           <DialogDescription className="text-sage-600">

@@ -89,7 +89,7 @@ export default function ChatInterface({ initialMood }: ChatInterfaceProps) {
 
   return (
     <div className="lg:col-span-2">
-      <div className="bg-white rounded-2xl shadow-sm border border-sage-100 overflow-hidden">
+      <div className="bg-white rounded-2xl shadow-sm border border-sage-200 overflow-hidden">
         <div className="bg-gradient-to-r from-sage-400 to-sage-500 p-4 text-white">
           <div className="flex items-center space-x-3">
             <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">

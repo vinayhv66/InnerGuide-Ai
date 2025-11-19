@@ -31,7 +31,7 @@ export default function Home() {
       {/* Floating Action Button for Quick Help */}
       <div className="fixed bottom-6 right-6 z-40">
         <button 
-          className="w-14 h-14 bg-coral-400 hover:bg-coral-500 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center"
+          className="w-14 h-14 bg-sage-500 hover:bg-sage-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center"
           data-testid="button-quick-help"
         >
           <HelpCircle size={24} />

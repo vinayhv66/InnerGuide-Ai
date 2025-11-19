@@ -10,24 +10,24 @@
   --card-foreground: hsl(47, 45%, 15%);
   --popover: hsl(0, 0%, 100%);
   --popover-foreground: hsl(47, 45%, 15%);
-  --primary: hsl(120, 30%, 50%);
+  --primary: hsl(210, 60%, 50%);
   --primary-foreground: hsl(0, 0%, 100%);
-  --secondary: hsl(47, 45%, 15%);
+  --secondary: hsl(210, 20%, 15%);
   --secondary-foreground: hsl(0, 0%, 100%);
-  --muted: hsl(240, 1.9608%, 90%);
-  --muted-foreground: hsl(47, 45%, 15%);
-  --accent: hsl(259, 20%, 92%);
-  --accent-foreground: hsl(120, 30%, 50%);
+  --muted: hsl(210, 20%, 96%);
+  --muted-foreground: hsl(210, 20%, 15%);
+  --accent: hsl(195, 50%, 95%);
+  --accent-foreground: hsl(210, 60%, 50%);
   --destructive: hsl(356.3033, 90.5579%, 54.3137%);
   --destructive-foreground: hsl(0, 0%, 100%);
-  --border: hsl(120, 20%, 90%);
-  --input: hsl(120, 15%, 97%);
-  --ring: hsl(120, 30%, 50%);
-  --chart-1: hsl(120, 30%, 50%);
-  --chart-2: hsl(159.7826, 100%, 36.0784%);
-  --chart-3: hsl(42.0290, 92.8251%, 56.2745%);
-  --chart-4: hsl(147.1429, 78.5047%, 41.9608%);
-  --chart-5: hsl(341.4894, 75.2000%, 50.9804%);
+  --border: hsl(210, 30%, 90%);
+  --input: hsl(210, 20%, 98%);
+  --ring: hsl(210, 60%, 50%);
+  --chart-1: hsl(210, 60%, 50%);
+  --chart-2: hsl(195, 60%, 55%);
+  --chart-3: hsl(200, 70%, 60%);
+  --chart-4: hsl(205, 65%, 55%);
+  --chart-5: hsl(210, 55%, 50%);
   --sidebar: hsl(52, 20%, 97%);
   --sidebar-foreground: hsl(47, 45%, 15%);
   --sidebar-primary: hsl(120, 30%, 50%);
@@ -51,31 +51,31 @@
   --tracking-normal: 0em;
   --spacing: 0.25rem;
   
-  /* Custom color variables for mental health theme */
-  --sage-50: hsl(120, 14%, 96%);
-  --sage-100: hsl(120, 14%, 93%);
-  --sage-200: hsl(120, 14%, 86%);
-  --sage-300: hsl(120, 14%, 70%);
-  --sage-400: hsl(120, 14%, 56%);
-  --sage-500: hsl(120, 14%, 43%);
-  --sage-600: hsl(120, 14%, 35%);
+  /* Medical website color palette - Professional blues and teals */
+  --sage-50: hsl(210, 40%, 98%);
+  --sage-100: hsl(210, 40%, 95%);
+  --sage-200: hsl(210, 40%, 90%);
+  --sage-300: hsl(210, 40%, 80%);
+  --sage-400: hsl(210, 50%, 65%);
+  --sage-500: hsl(210, 60%, 50%);
+  --sage-600: hsl(210, 70%, 40%);
   
-  --lavender-50: hsl(240, 9%, 98%);
-  --lavender-100: hsl(240, 9%, 94%);
-  --lavender-200: hsl(240, 9%, 88%);
-  --lavender-300: hsl(240, 9%, 82%);
-  --lavender-400: hsl(240, 9%, 66%);
-  --lavender-500: hsl(240, 9%, 59%);
+  --lavender-50: hsl(195, 30%, 98%);
+  --lavender-100: hsl(195, 30%, 95%);
+  --lavender-200: hsl(195, 30%, 90%);
+  --lavender-300: hsl(195, 30%, 85%);
+  --lavender-400: hsl(195, 50%, 70%);
+  --lavender-500: hsl(195, 60%, 55%);
   
-  --coral-50: hsl(17, 88%, 97%);
-  --coral-100: hsl(17, 88%, 92%);
-  --coral-200: hsl(17, 88%, 85%);
-  --coral-300: hsl(17, 88%, 76%);
-  --coral-400: hsl(17, 88%, 66%);
-  --coral-500: hsl(17, 88%, 58%);
+  --coral-50: hsl(195, 50%, 97%);
+  --coral-100: hsl(195, 50%, 93%);
+  --coral-200: hsl(195, 50%, 87%);
+  --coral-300: hsl(195, 50%, 78%);
+  --coral-400: hsl(195, 60%, 60%);
+  --coral-500: hsl(195, 70%, 50%);
   
-  --cream: hsl(50, 33%, 98%);
-  --charcoal: hsl(193, 23%, 18%);
+  --cream: hsl(0, 0%, 100%);
+  --charcoal: hsl(210, 20%, 15%);
 }
 
 .dark {

@@ -31,7 +31,7 @@ export default function WelcomeSection({ onMoodSelect }: WelcomeSectionProps) {
 
   return (
     <section className="mb-8">
-      <div className="bg-gradient-to-r from-sage-50 to-lavender-50 rounded-2xl p-6 border border-sage-100">
+      <div className="bg-gradient-to-r from-sage-50 to-lavender-50 rounded-2xl p-6 border border-sage-200 shadow-sm">
         <div className="text-center mb-6">
           <h2 className="text-2xl font-semibold text-charcoal mb-2">Welcome to Your Safe Space</h2>
           <p className="text-sage-600 max-w-2xl mx-auto leading-relaxed">
@@ -39,14 +39,14 @@ export default function WelcomeSection({ onMoodSelect }: WelcomeSectionProps) {
           </p>
         </div>
         
-        <div className="bg-white rounded-xl p-4 shadow-sm">
-          <h3 className="font-medium mb-3 text-center">How are you feeling right now?</h3>
+        <div className="bg-white rounded-xl p-4 shadow-sm border border-sage-100">
+          <h3 className="font-medium mb-3 text-center text-charcoal">How are you feeling right now?</h3>
           <div className="grid grid-cols-5 gap-3">
             {moods.map((mood) => (
               <button
                 key={mood.value}
-                className={`flex flex-col items-center p-3 rounded-xl hover:bg-sage-50 transition-all duration-200 ${
-                  selectedMood === mood.value ? 'bg-sage-100 scale-105' : ''
+                className={`flex flex-col items-center p-3 rounded-xl hover:bg-sage-50 transition-all duration-200 border ${
+                  selectedMood === mood.value ? 'bg-sage-100 scale-105 border-sage-300' : 'border-transparent'
                 }`}
                 onClick={() => handleMoodSelect(mood.value)}
                 data-testid={`button-mood-${mood.value}`}

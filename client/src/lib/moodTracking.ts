@@ -1,7 +1,7 @@
 import { MoodData } from "@/types";
 
 export class MoodTracker {
-  private storageKey = 'mindspace_mood_data';
+  private storageKey = 'innerguide_ai_mood_data';
 
   getMoodData(): MoodData[] {
     try {

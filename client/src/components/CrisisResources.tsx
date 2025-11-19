@@ -3,18 +3,18 @@ import { Shield, AlertTriangle, Info, Phone, MessageSquare, UserCheck, Building2
 export default function CrisisResources() {
   return (
     <section className="mt-8">
-      <div className="bg-gradient-to-r from-coral-50 to-coral-100 rounded-2xl p-6 border border-coral-200">
+      <div className="bg-gradient-to-r from-sage-50 to-lavender-50 rounded-2xl p-6 border border-sage-200 shadow-sm">
         <div className="text-center mb-4">
-          <div className="w-12 h-12 bg-coral-400 rounded-full flex items-center justify-center mx-auto mb-3">
+          <div className="w-12 h-12 bg-sage-500 rounded-full flex items-center justify-center mx-auto mb-3 shadow-md">
             <Shield className="text-white" size={24} />
           </div>
           <h3 className="font-semibold text-charcoal mb-2">Important Information</h3>
         </div>
         
         <div className="grid md:grid-cols-2 gap-6">
-          <div className="bg-white rounded-xl p-4">
+          <div className="bg-white rounded-xl p-4 border border-sage-100">
             <h4 className="font-medium text-charcoal mb-3 flex items-center">
-              <AlertTriangle className="text-coral-500 mr-2" size={20} />
+              <AlertTriangle className="text-sage-500 mr-2" size={20} />
               Crisis Support
             </h4>
             <p className="text-sm text-sage-600 mb-3">
@@ -23,34 +23,34 @@ export default function CrisisResources() {
             <div className="space-y-2">
               <a 
                 href="tel:+18005990019" 
-                className="flex items-center p-2 bg-coral-50 rounded-lg hover:bg-coral-100 transition-colors"
+                className="flex items-center p-2 bg-sage-50 rounded-lg hover:bg-sage-100 transition-colors border border-sage-200"
                 data-testid="link-crisis-phone-kiran"
               >
-                <Phone className="text-coral-500 mr-2" size={16} />
+                <Phone className="text-sage-500 mr-2" size={16} />
                 <span className="text-sm font-medium">1800-599-0019 - KIRAN Mental Health</span>
               </a>
               <a 
                 href="tel:+919999666555" 
-                className="flex items-center p-2 bg-coral-50 rounded-lg hover:bg-coral-100 transition-colors"
+                className="flex items-center p-2 bg-sage-50 rounded-lg hover:bg-sage-100 transition-colors border border-sage-200"
                 data-testid="link-crisis-phone-vandrevala"
               >
-                <Phone className="text-coral-500 mr-2" size={16} />
+                <Phone className="text-sage-500 mr-2" size={16} />
                 <span className="text-sm font-medium">+91 9999 666 555 - Vandrevala Foundation</span>
               </a>
               <a 
                 href="tel:+914424640050" 
-                className="flex items-center p-2 bg-coral-50 rounded-lg hover:bg-coral-100 transition-colors"
+                className="flex items-center p-2 bg-sage-50 rounded-lg hover:bg-sage-100 transition-colors border border-sage-200"
                 data-testid="link-crisis-phone-sneha"
               >
-                <Phone className="text-coral-500 mr-2" size={16} />
+                <Phone className="text-sage-500 mr-2" size={16} />
                 <span className="text-sm font-medium">+91 44 2464 0050 - Sneha India</span>
               </a>
               <a 
                 href="tel:+919152987821" 
-                className="flex items-center p-2 bg-coral-50 rounded-lg hover:bg-coral-100 transition-colors"
+                className="flex items-center p-2 bg-sage-50 rounded-lg hover:bg-sage-100 transition-colors border border-sage-200"
                 data-testid="link-crisis-phone-icall"
               >
-                <Phone className="text-coral-500 mr-2" size={16} />
+                <Phone className="text-sage-500 mr-2" size={16} />
                 <span className="text-sm font-medium">+91 9152 987 821 - iCall Mumbai</span>
               </a>
             </div>
